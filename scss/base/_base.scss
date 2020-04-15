@@ -62,6 +62,11 @@ p {
 }
 .arrow {
   @include _arrow;
+}
+.arrow-top {
+  @include _arrow-top;
+}
+.arrow-right {
   @include _arrow-right;
 }
 .loading {

@@ -444,18 +444,6 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  z-index: -2;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
-  z-index: -1;
 }
 
 *, *:before, *:after {
@@ -487,11 +475,13 @@ ul, li {
 a {
   text-decoration: none;
   transition: all .6s ease;
+  color: #37b8df;
 }
 
 a:hover {
   transition: all .6s ease;
   opacity: 0.6;
+  text-decoration: none;
 }
 
 p {
@@ -538,24 +528,24 @@ p {
 .arrow:after {
   content: '';
   display: block;
-  width: 2rem;
+  width: 1.2rem;
   /* 矢印の大きさの指定 */
-  height: 2rem;
+  height: 1.2rem;
   /* 矢印の大きさの指定 */
 }
 
 .arrow:after {
-  transform: rotate(45deg);
+  transform: rotate(135deg);
   /* 矢印の角度の指定 */
   position: absolute;
   /* 矢印の位置の指定 */
-  right: 2rem;
+  right: -1.7rem;
   /* 矢印の位置の指定 */
-  bottom: 1.5rem;
+  bottom: .4rem;
   /* 矢印の位置の指定 */
-  border-top: 0.3rem solid aqua;
+  border-top: 0.2rem solid #37b8df;
   /* 矢印の太さと色の指定 */
-  border-left: 0.3rem solid aqua;
+  border-left: 0.2rem solid #37b8df;
   /* 矢印の太さと色の指定 */
 }
 
@@ -584,7 +574,7 @@ p {
 }
 
 .caption h1 {
-  font-size: 7vw;
+  font-size: 8vw;
   font-weight: 700;
   text-shadow: .1rem .1rem .8rem black;
   display: none;
@@ -596,4 +586,8 @@ h2 {
 
 h3 {
   font-size: 2rem;
+}
+
+.img-thumbnail {
+  height: 40rem !important;
 }

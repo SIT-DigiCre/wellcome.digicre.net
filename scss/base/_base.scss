@@ -41,10 +41,12 @@ ul,li {
 a { 
   text-decoration: none;
   transition: all .6s ease;
+  color: #37b8df;
 }
 a:hover { 
   transition: all .6s ease;
   opacity: 0.6;
+  text-decoration: none;
 }
 p {
   font-size: 2rem;
@@ -60,7 +62,7 @@ p {
 }
 .arrow {
   @include _arrow;
-  @include _arrow-top;
+  @include _arrow-right;
 }
 .loading {
   @include _loading;
@@ -90,4 +92,7 @@ h2 {
 }
 h3 {
   font-size: 2rem;
+}
+.img-thumbnail {
+  height: 40rem !important;
 }

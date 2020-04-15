@@ -1,0 +1,35 @@
+/*--- Navigation ---*/
+.navbar {
+  font-weight: 700;
+}
+.navbar-brand img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.navbar-nav li {
+  padding-right: 1rem;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  &.active {
+    color: #37b8df !important;
+  }
+}
+.collapsing {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.bg-light {
+  background-color: transparent !important;
+}
+.m_scroll {
+  background-color: #fff !important;
+  padding: 20px 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  border-bottom: 0.1rem solid #EBEBEB;
+}
+.text_scroll {
+  color: #000 !important;
+}

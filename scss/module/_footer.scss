@@ -1,0 +1,36 @@
+footer {
+  background-color: #40474e;
+  color: white;
+  padding: 2rem 0 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  & img {
+    height: auto;
+    margin: 3rem 0;
+  }
+}
+hr.socket {
+  width: 100%;
+  border-top: .2rem solid #666b71;
+  margin-top: 3rem;
+}
+.fa-twitter {
+  color: #00aced;
+}
+.fa-youtube {
+  color: #bb0000;
+}
+.fa-twitter:hover,
+.fa-youtube:hover {
+  color: #d5d5d5;
+}
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+}
+footer p {
+  font-size: 2rem;
+  align-items: center;
+}

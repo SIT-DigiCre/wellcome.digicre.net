@@ -1,0 +1,10 @@
+@mixin _arrow-top {
+  &:after {   
+    transform: rotate(45deg); /* 矢印の角度の指定 */
+    position: absolute; /* 矢印の位置の指定 */
+    right: 2rem; /* 矢印の位置の指定 */
+    bottom: 1.5rem; /* 矢印の位置の指定 */
+    border-top: 0.3rem solid aqua; /* 矢印の太さと色の指定 */
+    border-left: 0.3rem solid aqua; /* 矢印の太さと色の指定 */
+  }
+}

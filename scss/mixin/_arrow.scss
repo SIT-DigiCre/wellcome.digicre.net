@@ -1,0 +1,10 @@
+@mixin _arrow {
+  position: relative;
+  text-decoration: none;
+  &:after {   
+    content: '';
+    display: block;
+    width: 2rem; /* 矢印の大きさの指定 */
+    height: 2rem; /* 矢印の大きさの指定 */
+  }   
+}

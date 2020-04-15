@@ -1,0 +1,13 @@
+@mixin _youtube {
+  /*YouTubeレスポンシブ*/
+  position: relative;
+  max-width: 100%;
+  padding-top: 56.25%; /* 16:9 の高さなので 56.25% (= 9 ÷ 16) */
+  & iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    }
+}

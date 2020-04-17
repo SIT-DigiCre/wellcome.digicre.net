@@ -1,7 +1,4 @@
 @mixin _btn-custom {
   transition: all .6s ease;
   padding: 0rem 2.5rem;
-  &:hover {
-    padding: 0rem 5rem;
-  }
 }

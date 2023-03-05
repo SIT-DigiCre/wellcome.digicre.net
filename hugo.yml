@@ -1,3 +1,8 @@
 baseURL: https://digicre.net/welcome/
 languageCode: ja
 title: デジクリ
+
+disableKinds:
+  - "taxonomy"
+  - "term"
+  - "RSS"

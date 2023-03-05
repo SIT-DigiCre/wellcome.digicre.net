@@ -1,3 +1,95 @@
 {{ define "main" }}
-  {{ .Content }}
+  <!-- デバッグ用 -->
+  <ul style="border:solid">
+    {{ range .Site.Sections.ByWeight }}
+      <li>
+        <a href="#{{ path.Dir .File.Dir }}">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+    <li>
+      <a href="">参加申込</a>
+    </li>
+  </ul>
+  <ul style="border:solid">
+    {{ range .Site.Pages }}
+      <li>{{ .Permalink }}</li>
+    {{ end }}
+  </ul>
+
+  <div class="pv">
+    <div class="pv__player"></div>
+    <div class="py__scroll-nav">Scroll</div>
+  </div>
+
+  {{ with .Site.GetPage "/about-us" }}
+    <article
+      class="about-us"
+      id="{{ path.Dir .File.Dir }}"
+    >
+      <div class="about-us__content">
+        <h2>{{ .Title }}</h2>
+
+        {{ .Content }}
+      </div>
+    </article>
+  {{ end }}
+
+  {{ with .Site.GetPage "/teams" }}
+    <div
+      class="teams"
+      id="{{ path.Dir .File.Dir }}"
+    >
+      <h2>{{ .Title }}</h2>
+
+      {{ range .RegularPages }}
+        <a href="{{ .Permalink }}">
+          <article class="teams__card">
+            <h3>{{ .Title }}</h3>
+          </article>
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ with .Site.GetPage "/schedule" }}
+    <div
+      class="schedule"
+      id="{{ path.Dir .File.Dir }}"
+    >
+      <h2>{{ .Title }}</h2>
+    </div>
+  {{ end }}
+
+  {{ with .Site.GetPage "/faq" }}
+    <div
+      class="faq"
+      id="{{ path.Dir .File.Dir }}"
+    >
+      <h2>{{ .Title }}</h2>
+
+      {{ range .CurrentSection.RegularPages }}
+        <article class="faq__content">
+          <h3>{{ .Title }}</h3>
+
+          {{ .Content }}
+        </article>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ with .Site.GetPage "/join-us" }}
+    <article class="join-us">
+      <div class="join-us__content">
+        <h2>{{ .Title }}</h2>
+
+        {{ .Content }}
+      </div>
+
+      <div class="join-us__button">
+        <a href="">参加申込</a>
+      </div>
+    </article>
+  {{ end }}
 {{ end }}

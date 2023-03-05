@@ -14,7 +14,7 @@
   </ul>
   <ul style="border:solid">
     {{ range .Site.Pages }}
-      <li>{{ .Permalink }}</li>
+      <li>{{ .Title }}@{{ .Permalink }}</li>
     {{ end }}
   </ul>
 
@@ -43,13 +43,15 @@
     >
       <h2>{{ .Title }}</h2>
 
-      {{ range .RegularPages }}
-        <a href="{{ .Permalink }}">
-          <article class="teams__card">
-            <h3>{{ .Title }}</h3>
-          </article>
-        </a>
-      {{ end }}
+      <div class="teams__container">
+        {{ range .RegularPages }}
+          <a href="{{ .Permalink }}">
+            <article class="teams__card">
+              <h3>{{ .Title }}</h3>
+            </article>
+          </a>
+        {{ end }}
+      </div>
     </div>
   {{ end }}
 

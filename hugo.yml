@@ -1,6 +1,6 @@
-baseURL: https://digicre.net/welcome/
-languageCode: ja
-title: デジクリ
+baseURL: "https://digicre.net/welcome/"
+languageCode: "ja"
+title: "デジクリ"
 
 disableKinds:
   - "taxonomy"

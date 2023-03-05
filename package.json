@@ -9,6 +9,8 @@
     "prettier-plugin-go-template": "0.0.13"
   },
   "dependencies": {
+    "@material-design-icons/svg": "0.14.3",
+    "simple-icons": "8.6.0",
     "the-new-css-reset": "1.8.4"
   }
 }

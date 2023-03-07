@@ -43,7 +43,7 @@
             >
               {{ .Name }}
 
-              {{ (resources.Get "img/material-symbols/open-in-new.svg").Content | safeHTML }}
+              {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
             </a>
           </li>
         {{ end }}
@@ -52,15 +52,18 @@
       {{/* デジクリ関連リンク */}}
       <ul class="menu">
         {{ range index .Site.Menus "links" }}
+          {{ $iconPath := print "img/icons/" .Identifier ".svg" }}
+
+
           <li class="menu__item">
             <a
               href="{{ .URL }}"
               rel="noopener"
               target="_blank"
             >
+              {{ (resources.Get $iconPath).Content | safeHTML }}
               {{ .Name }}
-
-              {{ (resources.Get "img/material-symbols/open-in-new.svg").Content | safeHTML }}
+              {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
             </a>
           </li>
         {{ end }}
@@ -73,7 +76,7 @@
     </main>
 
     <footer class="body__footer">
-      <small class="copyright">© 2023 デジクリ</small>
+      <small>© 2023 デジクリ</small>
     </footer>
   </body>
 </html>

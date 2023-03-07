@@ -9,6 +9,7 @@
   column-gap: 16px;
   display: flex;
   padding: 16px;
+  flex-grow: 1;
 
   &:hover {
     background: #606060;
@@ -17,6 +18,10 @@
   > svg {
     block-size: 1em;
     inline-size: 1em;
+
+    &:nth-child(2) {
+      margin-inline-start: auto;
+    }
   }
 }
 

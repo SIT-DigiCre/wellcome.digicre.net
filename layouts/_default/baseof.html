@@ -7,6 +7,20 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>{{ .Site.Title }}</title>
+
+    {{ with resources.GetRemote "https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.min.css" }}
+      <link
+        rel="stylesheet"
+        href="{{ .Permalink }}"
+      />
+    {{ end }}
+
+    {{ with resources.Get "scss/style.scss" | resources.ToCSS | resources.Fingerprint }}
+      <link
+        rel="stylesheet"
+        href="{{ .Permalink }}"
+      />
+    {{ end }}
   </head>
   <body class="body">
     <header class="header"></header>

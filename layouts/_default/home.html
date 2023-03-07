@@ -1,32 +1,44 @@
 {{ define "main" }}
-  <!-- デバッグ用 -->
-  <ul style="border:solid">
-    {{ range .Site.Sections.ByWeight }}
-      <li>
-        <a href="#{{ path.Dir .File.Dir }}">
-          {{ .Title }}
-        </a>
-      </li>
-    {{ end }}
-    <li>
-      <a href="">参加申込</a>
-    </li>
-  </ul>
-  <ul style="border:solid">
-    {{ range .Site.Pages }}
-      <li>{{ .Title }}@{{ .Permalink }}</li>
-    {{ end }}
-  </ul>
+  {{/* For debugging */}}
+  {{ if .Site.IsServer }}
+    <ul style="border:solid">
+      {{ range .Site.Sections.ByWeight }}
+        {{ $id :=  path.Dir .File.Dir }}
 
+
+        <li>
+          <a href="#{{ $id }}">
+            {{ .Title }}
+          </a>
+        </li>
+      {{ end }}
+
+      {{ range first 1 (index .Site.Menus "join-us") }}
+        <li>
+          <a
+            href="{{ .URL }}"
+            rel="noopener"
+            target="_blank"
+          >
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  {{/* PV */}}
   <div class="pv">
     <div class="pv__player"></div>
+
     <div class="py__scroll-nav">Scroll</div>
   </div>
 
+  {{/* デジクリとは？ */}}
   {{ with .Site.GetPage "/about-us" }}
     <article
       class="about-us"
-      id="{{ path.Dir .File.Dir }}"
+      id="about-us"
     >
       <div class="about-us__content">
         <h2>{{ .Title }}</h2>
@@ -36,38 +48,65 @@
     </article>
   {{ end }}
 
+  {{/* 班紹介 */}}
   {{ with .Site.GetPage "/teams" }}
     <div
       class="teams"
-      id="{{ path.Dir .File.Dir }}"
+      id="teams"
     >
       <h2>{{ .Title }}</h2>
 
       <div class="teams__container">
-        {{ range .RegularPages }}
-          <a href="{{ .Permalink }}">
-            <article class="teams__card">
-              <h3>{{ .Title }}</h3>
-            </article>
-          </a>
+        {{ range index .Site.Menus "teams" }}
+          {{ if ne .URL "" }}
+            <a
+              href="{{ .URL }}"
+              rel="noopener"
+              target="_blank"
+            >
+              <article class="teams__card">
+                <h3>{{ .Name }}</h3>
+              </article>
+            </a>
+          {{ else }}
+            <a>
+              <article class="teams__card">
+                <h3>{{ .Name }}</h3>
+              </article>
+            </a>
+          {{ end }}
+
         {{ end }}
       </div>
     </div>
   {{ end }}
 
+  {{/* 新歓スケジュール */}}
   {{ with .Site.GetPage "/schedule" }}
     <div
       class="schedule"
-      id="{{ path.Dir .File.Dir }}"
+      id="schedule"
     >
       <h2>{{ .Title }}</h2>
+
+      {{ range index .Site.Menus "schedule" }}
+        <iframe
+          frameborder="0"
+          height="480"
+          scrolling="no"
+          src="{{ .URL }}"
+          width="680"
+        >
+        </iframe>
+      {{ end }}
     </div>
   {{ end }}
 
+  {{/* よくある質問 */}}
   {{ with .Site.GetPage "/faq" }}
     <div
       class="faq"
-      id="{{ path.Dir .File.Dir }}"
+      id="faq"
     >
       <h2>{{ .Title }}</h2>
 
@@ -81,7 +120,9 @@
     </div>
   {{ end }}
 
+  {{/* 興味がありますか？ */}}
   {{ with .Site.GetPage "/join-us" }}
+
     <article class="join-us">
       <div class="join-us__content">
         <h2>{{ .Title }}</h2>
@@ -89,9 +130,16 @@
         {{ .Content }}
       </div>
 
-      <div class="join-us__button">
-        <a href="">参加申込</a>
-      </div>
+      {{ range first 1 (index .Site.Menus "join-us") }}
+        <a
+          href="{{ .URL }}"
+          rel="noopener"
+          target="_blank"
+          class="join-us__button"
+        >
+          {{ .Name }}
+        </a>
+      {{ end }}
     </article>
   {{ end }}
 {{ end }}

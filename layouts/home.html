@@ -6,7 +6,7 @@
         type="text/html"
         width="320"
         height="240"
-        src="https://example.com"
+        src="https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&controls=0&playlist=EaFvRsJAV9U"
         frameborder="0"
         class="pv__player"
       ></iframe>
@@ -22,10 +22,13 @@
     {{ end }}
 
 
-    <div class="pv__scroll-nav">
+    <a
+      href="#about-us"
+      class="pv__scroll-nav"
+    >
       Scroll
       {{ (resources.Get "img/icons/arrow-downward.svg").Content | safeHTML }}
-    </div>
+    </a>
   </div>
 
   {{/* デジクリとは？ */}}
@@ -143,7 +146,7 @@
   {{ end }}
 {{ end }}
 
-{{ define "menu" }}
+{{ define "toc" }}
   {{ range .Site.Sections.ByWeight }}
     {{ $id :=  path.Dir .File.Dir }}
     {{ $iconPath := print "img/icons/" $id ".svg" }}
@@ -152,11 +155,28 @@
     <li>
       <a
         href="#{{ $id }}"
-        class="menu__item"
+        class="menu__item menu__item--toc"
       >
         {{ (resources.Get $iconPath).Content | safeHTML }}
         {{ .Title }}
       </a>
     </li>
   {{ end }}
+
+  {{/* 参加申込リンク */}}
+  {{ range first 1 (index .Site.Menus "join-us") }}
+    <li>
+      <a
+        href="{{ .URL }}"
+        rel="noopener"
+        target="_blank"
+        class="menu__item menu__item--join-us"
+      >
+        {{ .Name }}
+
+        {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
+      </a>
+    </li>
+  {{ end }}
+
 {{ end }}

@@ -25,39 +25,32 @@
   <body class="body">
     <input
       type="checkbox"
-      name="header-toggle"
+      name="toggle"
       id="header-toggle"
+      class="toggle"
     />
 
-    <label for="header-toggle">
+    <label
+      for="header-toggle"
+      class="toggle-button toggle-button--open"
+    >
       {{ (resources.Get "img/icons/menu.svg").Content | safeHTML }}
+      {{ (resources.Get "img/icons/close.svg").Content | safeHTML }}
     </label>
 
-    <header class="header">
+    <header
+      class="header"
+      id="header"
+    >
       {{/* ロゴ */}}
       {{ with resources.Get "img/logo.svg" }}
         {{ .Content | safeHTML }}
       {{ end }}
 
-      {{/* ナビゲーションメニュー */}}
+      {{/* 目次 */}}
       <nav class="menu">
         <ul>
-          {{ block "menu" . }}
-          {{ end }}
-
-          {{ range first 1 (index .Site.Menus "join-us") }}
-            <li>
-              <a
-                href="{{ .URL }}"
-                rel="noopener"
-                target="_blank"
-                class="menu__item menu__item--join-us"
-              >
-                {{ .Name }}
-
-                {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
-              </a>
-            </li>
+          {{ block "toc" . }}
           {{ end }}
         </ul>
       </nav>

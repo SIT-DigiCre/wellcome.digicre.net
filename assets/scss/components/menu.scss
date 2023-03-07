@@ -1,21 +1,28 @@
 .menu {
-  background: #303030;
+  background: #404040;
   border-radius: 16px;
   overflow: hidden;
 }
 
 .menu__item > a {
+  align-items: center;
   column-gap: 16px;
   display: flex;
   padding: 16px;
 
   &:hover {
-    background: #505050;
+    background: #606060;
+  }
+
+  > svg {
+    block-size: 1em;
+    inline-size: 1em;
   }
 }
 
 .menu__item--join-us > a {
   background: #00b0f0;
+  column-gap: 0;
   justify-content: center;
 
   &:hover {

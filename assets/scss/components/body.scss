@@ -3,18 +3,18 @@
 }
 
 .body__header {
-  background: #000;
+  background: #202020;
+  block-size: 100%;
   color: #fff;
   display: flex;
   flex-direction: column;
   grid-row: span 2;
+  inline-size: 320px;
+  inset: 0;
   padding-block: 64px;
   padding-inline: 16px;
-  row-gap: 32px;
-  inline-size: 320px;
   position: fixed;
-  block-size: 100%;
-  inset: 0;
+  row-gap: 32px;
 
   > svg {
     inline-size: 100%;
@@ -26,7 +26,7 @@
 }
 
 .body__footer {
-  background: #000;
+  background: #404040;
   color: #fff;
   padding: 16px;
   text-align: center;

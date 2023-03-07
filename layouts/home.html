@@ -1,27 +1,28 @@
 {{ define "main" }}
   {{/* PV */}}
   <div class="pv">
-    <div class="pv__container">
-      {{ if .Site.IsServer }}
-        <iframe
-          id="ytplayer"
-          type="text/html"
-          width="320"
-          height="240"
-          src=""
-          frameborder="0"
-        ></iframe>
-      {{ else }}
-        <iframe
-          id="ytplayer"
-          type="text/html"
-          width="320"
-          height="240"
-          src="https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&playlist=EaFvRsJAV9U"
-          frameborder="0"
-        ></iframe>
-      {{ end }}
-    </div>
+    {{ if .Site.IsServer }}
+      <iframe
+        id="ytplayer"
+        type="text/html"
+        width="320"
+        height="240"
+        src=""
+        frameborder="0"
+        class="pv__player"
+      ></iframe>
+    {{ else }}
+      <iframe
+        id="ytplayer"
+        type="text/html"
+        width="320"
+        height="240"
+        src="https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&playlist=EaFvRsJAV9U"
+        frameborder="0"
+        class="pv__player"
+      ></iframe>
+    {{ end }}
+
 
     <div class="py__scroll-nav">
       Scroll
@@ -38,7 +39,6 @@
       <h2>{{ .Title }}</h2>
 
       {{ .Content }}
-
     </article>
   {{ end }}
 

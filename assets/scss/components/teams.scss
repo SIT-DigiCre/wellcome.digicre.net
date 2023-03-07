@@ -1,14 +1,12 @@
 .teams {
   background: #eee;
-  display: flex;
-  flex-direction: column;
   padding-block: 64px;
   padding-inline: 32px;
-  row-gap: 32px;
 
   > h2 {
-    font-weight: 700;
     font-size: 2rem;
+    font-weight: 700;
+    margin-block-end: 32px;
   }
 }
 
@@ -19,7 +17,7 @@
 }
 
 .teams__card {
-  aspect-ratio: 1200/630;
+  aspect-ratio: 16/9;
   background: #000;
   border-radius: 16px;
   color: #fff;
@@ -31,7 +29,14 @@
   }
 
   > h3 {
+    align-items: center;
+    display: flex;
     font-size: 1.5rem;
     font-weight: 700;
+
+    > svg {
+      block-size: 1em;
+      inline-size: 1em;
+    }
   }
 }

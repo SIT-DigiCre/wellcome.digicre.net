@@ -2,17 +2,31 @@
   {{/* PV */}}
   <div class="pv">
     <div class="pv__container">
-      <iframe
-        id="ytplayer"
-        type="text/html"
-        width="320"
-        height="240"
-        src="https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&playlist=EaFvRsJAV9U"
-        frameborder="0"
-      ></iframe>
+      {{ if .Site.IsServer }}
+        <iframe
+          id="ytplayer"
+          type="text/html"
+          width="320"
+          height="240"
+          src=""
+          frameborder="0"
+        ></iframe>
+      {{ else }}
+        <iframe
+          id="ytplayer"
+          type="text/html"
+          width="320"
+          height="240"
+          src="https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&playlist=EaFvRsJAV9U"
+          frameborder="0"
+        ></iframe>
+      {{ end }}
     </div>
 
-    <div class="py__scroll-nav">Scroll</div>
+    <div class="py__scroll-nav">
+      Scroll
+      {{ (resources.Get "img/material-symbols/arrow-downward.svg").Content | safeHTML }}
+    </div>
   </div>
 
   {{/* デジクリとは？ */}}
@@ -46,9 +60,10 @@
               target="_blank"
             >
               <article class="teams__card">
-                <h3>{{ .Name }}</h3>
-
-                {{ (resources.Get "img/material-symbols/open-in-new.svg").Content | safeHTML }}
+                <h3>
+                  {{ .Name }}
+                  {{ (resources.Get "img/material-symbols/open-in-new.svg").Content | safeHTML }}
+                </h3>
               </article>
             </a>
           {{ else }}
@@ -93,13 +108,15 @@
     >
       <h2>{{ .Title }}</h2>
 
-      {{ range .CurrentSection.RegularPages }}
-        <article class="faq__content">
-          <h3>{{ .Title }}</h3>
+      <div class="faq__container">
+        {{ range .CurrentSection.RegularPages }}
+          <article class="faq__card">
+            <h3>{{ .Title }}</h3>
 
-          {{ .Content }}
-        </article>
-      {{ end }}
+            {{ .Content }}
+          </article>
+        {{ end }}
+      </div>
     </div>
   {{ end }}
 

@@ -8,7 +8,6 @@
   color: #fff;
   padding-block: 64px;
   padding-inline: 32px;
-  flex-grow: 1;
 
   > h2 {
     font-size: 2rem;
@@ -17,21 +16,26 @@
   }
 
   > p:not(:last-child) {
-    margin-block-end: 16px;
+    margin-block-end: 8px;
   }
 }
 
 .join-us__button {
-  display: flex;
-  justify-content: center;
   align-items: center;
   background: #00b0f0;
   color: #fff;
+  display: flex;
   font-size: 1.5rem;
   font-weight: 700;
+  justify-content: center;
   padding: 32px;
 
   &:hover {
     background: #70d9ff;
+  }
+
+  > svg {
+    block-size: 1em;
+    inline-size: 1em;
   }
 }

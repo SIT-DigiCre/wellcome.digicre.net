@@ -9,9 +9,10 @@
   padding-inline: 16px;
   position: fixed;
   top: 0;
+  z-index: 1;
 
   @media screen and (min-width: 1024px) {
-    inline-size: 320px;
+    inline-size: 25%;
   }
 
   > svg {
@@ -25,7 +26,34 @@
   }
 }
 
-label[for="header-toggle"] {
+.toggle {
+  display: none;
+
+  &:not(:checked) ~ .header {
+    display: none;
+
+    @media screen and(min-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &:checked + .toggle-button {
+    background: none;
+    box-shadow: none;
+
+    > svg {
+      &:first-child {
+        display: none;
+      }
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
+.toggle-button {
   background: #00b0f0;
   border-radius: 0 0 16px 0;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
@@ -33,7 +61,7 @@ label[for="header-toggle"] {
   padding: 16px;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 
   @media screen and (min-width: 1024px) {
     display: none;
@@ -45,24 +73,13 @@ label[for="header-toggle"] {
 
   > svg {
     color: #fff;
-    display: block;
-  }
-}
 
-input[id="header-toggle"] {
-  display: none;
-
-  &:not(:checked) ~ .header {
-    display: none;
-
-    @media screen and (min-width: 1024px) {
+    &:first-child {
       display: block;
     }
-  }
 
-  &:checked ~ label[for="header-toggle"] {
-    background: none;
-    box-shadow: none;
-    position: absolute;
+    &:last-child {
+      display: none;
+    }
   }
 }

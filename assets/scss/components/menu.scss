@@ -34,3 +34,11 @@
     background: #70d9ff;
   }
 }
+
+.menu__item--toc {
+  display: none;
+
+  @media screen and(min-width: 1024px) {
+    display: flex;
+  }
+}

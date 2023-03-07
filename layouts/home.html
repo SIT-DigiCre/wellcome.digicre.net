@@ -3,21 +3,19 @@
   <div class="pv">
     {{ if .Site.IsServer }}
       <iframe
-        id="ytplayer"
         type="text/html"
         width="320"
         height="240"
-        src=""
+        src="https://example.com"
         frameborder="0"
         class="pv__player"
       ></iframe>
     {{ else }}
       <iframe
-        id="ytplayer"
         type="text/html"
         width="320"
         height="240"
-        src="https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&playlist=EaFvRsJAV9U"
+        src="https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&controls=0&playlist=EaFvRsJAV9U"
         frameborder="0"
         class="pv__player"
       ></iframe>

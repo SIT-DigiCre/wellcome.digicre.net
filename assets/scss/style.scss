@@ -1,11 +1,11 @@
 @import "./components/body.scss";
 @import "./components/menu.scss";
-@import "./components/pv.scss";
-@import "./components/about-us.scss";
-@import "./components/teams.scss";
-@import "./components/schedule.scss";
-@import "./components/faq.scss";
-@import "./components/join-us.scss";
+@import "./components/home/about-us.scss";
+@import "./components/home/faq.scss";
+@import "./components/home/join-us.scss";
+@import "./components/home/pv.scss";
+@import "./components/home/schedule.scss";
+@import "./components/home/teams.scss";
 
 html {
   font-family: "Inter", "Source Han Sans";

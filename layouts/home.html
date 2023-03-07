@@ -149,8 +149,11 @@
     {{ $iconPath := print "img/icons/" $id ".svg" }}
 
 
-    <li class="menu__item">
-      <a href="#{{ $id }}">
+    <li>
+      <a
+        href="#{{ $id }}"
+        class="menu__item"
+      >
         {{ (resources.Get $iconPath).Content | safeHTML }}
         {{ .Title }}
       </a>

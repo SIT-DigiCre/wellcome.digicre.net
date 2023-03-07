@@ -1,35 +1,16 @@
 {{ define "main" }}
-  {{/* For debugging */}}
-  {{ if .Site.IsServer }}
-    <ul style="border:solid">
-      {{ range .Site.Sections.ByWeight }}
-        {{ $id :=  path.Dir .File.Dir }}
-
-
-        <li>
-          <a href="#{{ $id }}">
-            {{ .Title }}
-          </a>
-        </li>
-      {{ end }}
-
-      {{ range first 1 (index .Site.Menus "join-us") }}
-        <li>
-          <a
-            href="{{ .URL }}"
-            rel="noopener"
-            target="_blank"
-          >
-            {{ .Name }}
-          </a>
-        </li>
-      {{ end }}
-    </ul>
-  {{ end }}
-
   {{/* PV */}}
   <div class="pv">
-    <div class="pv__player"></div>
+    <div class="pv__container">
+      <iframe
+        id="ytplayer"
+        type="text/html"
+        width="320"
+        height="240"
+        src="https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&playlist=EaFvRsJAV9U"
+        frameborder="0"
+      ></iframe>
+    </div>
 
     <div class="py__scroll-nav">Scroll</div>
   </div>
@@ -66,6 +47,8 @@
             >
               <article class="teams__card">
                 <h3>{{ .Name }}</h3>
+
+                {{ (resources.Get "img/material-symbols/open-in-new.svg").Content | safeHTML }}
               </article>
             </a>
           {{ else }}
@@ -95,7 +78,7 @@
           height="480"
           scrolling="no"
           src="{{ .URL }}"
-          width="680"
+          width="300"
         >
         </iframe>
       {{ end }}
@@ -138,8 +121,23 @@
           class="join-us__button"
         >
           {{ .Name }}
+
+          {{ (resources.Get "img/material-symbols/open-in-new.svg").Content | safeHTML }}
         </a>
       {{ end }}
     </article>
+  {{ end }}
+{{ end }}
+
+{{ define "menu" }}
+  {{ range .Site.Sections.ByWeight }}
+    {{ $id :=  path.Dir .File.Dir }}
+
+
+    <li class="menu__item">
+      <a href="#{{ $id }}">
+        {{ .Title }}
+      </a>
+    </li>
   {{ end }}
 {{ end }}

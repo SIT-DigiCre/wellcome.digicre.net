@@ -1,1 +1,13 @@
+@import "./components/body.scss";
+@import "./components/menu.scss";
+@import "./components/pv.scss";
+@import "./components/about-us.scss";
+@import "./components/teams.scss";
+@import "./components/schedule.scss";
+@import "./components/faq.scss";
 @import "./components/join-us.scss";
+
+html {
+  font-family: "Inter", "Source Han Sans";
+  line-height: 1.25;
+}

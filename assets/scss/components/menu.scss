@@ -1,0 +1,24 @@
+.menu {
+  background: #303030;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.menu__item > a {
+  column-gap: 16px;
+  display: flex;
+  padding: 16px;
+
+  &:hover {
+    background: #505050;
+  }
+}
+
+.menu__item--join-us > a {
+  background: #00b0f0;
+  justify-content: center;
+
+  &:hover {
+    background: #70d9ff;
+  }
+}

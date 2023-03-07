@@ -1,10 +1,10 @@
 {
+  "singleAttributePerLine": true,
   "overrides": [
     {
       "files": ["*.html"],
       "options": {
-        "parser": "go-template",
-        "singleAttributePerLine": true
+        "parser": "go-template"
       }
     }
   ]

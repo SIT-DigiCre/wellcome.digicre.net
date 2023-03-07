@@ -23,12 +23,57 @@
     {{ end }}
   </head>
   <body class="body">
-    <header class="header"></header>
+    <header class="body__header">
+      {{/* ロゴ */}}
+      {{ with resources.Get "img/logo.svg" }}
+        {{ .Content | safeHTML }}
+      {{ end }}
 
-    <main class="main">{{ block "main" . }}{{ end }}</main>
+      {{/* 目次 */}}
+      <ul class="menu">
+        {{ block "menu" . }}
+        {{ end }}
 
-    <footer class="footer">
-      <small class="footer__copyright">© 2023 デジクリ</small>
+        {{ range first 1 (index .Site.Menus "join-us") }}
+          <li class="menu__item menu__item--join-us">
+            <a
+              href="{{ .URL }}"
+              rel="noopener"
+              target="_blank"
+            >
+              {{ .Name }}
+
+              {{ (resources.Get "img/material-symbols/open-in-new.svg").Content | safeHTML }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+
+      {{/* デジクリ関連リンク */}}
+      <ul class="menu">
+        {{ range index .Site.Menus "links" }}
+          <li class="menu__item">
+            <a
+              href="{{ .URL }}"
+              rel="noopener"
+              target="_blank"
+            >
+              {{ .Name }}
+
+              {{ (resources.Get "img/material-symbols/open-in-new.svg").Content | safeHTML }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </header>
+
+    <main class="body__main">
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+
+    <footer class="body__footer">
+      <small class="copyright">© 2023 デジクリ</small>
     </footer>
   </body>
 </html>

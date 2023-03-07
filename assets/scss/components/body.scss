@@ -1,0 +1,33 @@
+.body {
+  margin-inline-start: 320px;
+}
+
+.body__header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  grid-row: span 2;
+  padding-block: 64px;
+  padding-inline: 16px;
+  row-gap: 32px;
+  inline-size: 320px;
+  position: fixed;
+  block-size: 100%;
+  inset: 0;
+
+  > svg {
+    inline-size: 100%;
+    block-size: 48px;
+  }
+}
+
+.body__main {
+}
+
+.body__footer {
+  background: #000;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+}

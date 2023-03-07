@@ -1,0 +1,25 @@
+.faq {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  padding-block: 64px;
+  padding-inline: 32px;
+  row-gap: 32px;
+
+  > h2 {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}
+
+.faq__content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+
+  > h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-block-end: 16px;
+  }
+}

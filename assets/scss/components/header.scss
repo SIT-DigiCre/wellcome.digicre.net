@@ -2,14 +2,12 @@
   background: #202020;
   block-size: 100%;
   color: #fff;
-  display: flex;
-  flex-direction: column;
   inline-size: 100%;
   left: 0;
+  overflow-y: auto;
   padding-block: 64px;
   padding-inline: 16px;
   position: fixed;
-  row-gap: 32px;
   top: 0;
 
   @media screen and (min-width: 1024px) {
@@ -18,19 +16,12 @@
 
   > svg {
     block-size: 48px;
+    display: block;
     margin-inline: auto;
   }
-}
 
-input[id="header-toggle"] {
-  display: none;
-
-  &:not(:checked) ~ .header {
-    display: none;
-
-    @media screen and (min-width: 1024px) {
-      display: flex;
-    }
+  > * + * {
+    margin-block-start: 32px;
   }
 }
 
@@ -42,13 +33,36 @@ label[for="header-toggle"] {
   padding: 16px;
   position: fixed;
   top: 0;
+  z-index: 1;
 
   @media screen and (min-width: 1024px) {
     display: none;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
   > svg {
     color: #fff;
     display: block;
+  }
+}
+
+input[id="header-toggle"] {
+  display: none;
+
+  &:not(:checked) ~ .header {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &:checked ~ label[for="header-toggle"] {
+    background: none;
+    box-shadow: none;
+    position: absolute;
   }
 }

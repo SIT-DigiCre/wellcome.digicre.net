@@ -4,7 +4,7 @@
   padding-inline: 32px;
 
   > h2 {
-    font-size: 2rem;
+    font-size: var(--title-size);
     font-weight: 700;
     margin-block-end: 32px;
   }
@@ -21,7 +21,7 @@
   padding: 32px;
 
   > h3 {
-    font-size: 1.5rem;
+    font-size: var(--heading-size);
     font-weight: 700;
     margin-block-end: 16px;
   }

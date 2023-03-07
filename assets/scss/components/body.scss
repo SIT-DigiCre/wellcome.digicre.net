@@ -1,33 +1,5 @@
 .body {
-  margin-inline-start: 320px;
-}
-
-.body__header {
-  background: #202020;
-  block-size: 100%;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  grid-row: span 2;
-  inline-size: 320px;
-  inset: 0;
-  padding-block: 64px;
-  padding-inline: 16px;
-  position: fixed;
-  row-gap: 32px;
-
-  > svg {
-    inline-size: 100%;
-    block-size: 48px;
+  @media screen and (min-width: 1024px) {
+    margin-inline-start: 320px;
   }
-}
-
-.body__main {
-}
-
-.body__footer {
-  background: #404040;
-  color: #fff;
-  padding: 16px;
-  text-align: center;
 }

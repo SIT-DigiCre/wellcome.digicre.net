@@ -1,0 +1,54 @@
+.header {
+  background: #202020;
+  block-size: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  left: 0;
+  padding-block: 64px;
+  padding-inline: 16px;
+  position: fixed;
+  row-gap: 32px;
+  top: 0;
+
+  @media screen and (min-width: 1024px) {
+    inline-size: 320px;
+  }
+
+  > svg {
+    block-size: 48px;
+    margin-inline: auto;
+  }
+}
+
+input[id="header-toggle"] {
+  display: none;
+
+  &:not(:checked) ~ .header {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+  }
+}
+
+label[for="header-toggle"] {
+  background: #00b0f0;
+  border-radius: 0 0 16px 0;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+  left: 0;
+  padding: 16px;
+  position: fixed;
+  top: 0;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  > svg {
+    color: #fff;
+    display: block;
+  }
+}

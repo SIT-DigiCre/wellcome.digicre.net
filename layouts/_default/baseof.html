@@ -23,59 +23,75 @@
     {{ end }}
   </head>
   <body class="body">
-    <header class="body__header">
+    <input
+      type="checkbox"
+      name="header-toggle"
+      id="header-toggle"
+    />
+
+    <label for="header-toggle">
+      {{ (resources.Get "img/icons/menu.svg").Content | safeHTML }}
+    </label>
+
+    <header class="header">
       {{/* ロゴ */}}
       {{ with resources.Get "img/logo.svg" }}
         {{ .Content | safeHTML }}
       {{ end }}
 
-      {{/* 目次 */}}
-      <ul class="menu">
-        {{ block "menu" . }}
-        {{ end }}
+      {{/* ナビゲーションメニュー */}}
+      <nav class="menu">
+        <ul>
+          {{ block "menu" . }}
+          {{ end }}
 
-        {{ range first 1 (index .Site.Menus "join-us") }}
-          <li class="menu__item menu__item--join-us">
-            <a
-              href="{{ .URL }}"
-              rel="noopener"
-              target="_blank"
-            >
-              {{ .Name }}
+          {{ range first 1 (index .Site.Menus "join-us") }}
+            <li>
+              <a
+                href="{{ .URL }}"
+                rel="noopener"
+                target="_blank"
+                class="menu__item menu__item--join-us"
+              >
+                {{ .Name }}
 
-              {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
-            </a>
-          </li>
-        {{ end }}
-      </ul>
+                {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
 
-      {{/* デジクリ関連リンク */}}
-      <ul class="menu">
-        {{ range index .Site.Menus "links" }}
-          {{ $iconPath := print "img/icons/" .Identifier ".svg" }}
+      <nav class="menu">
+        {{/* デジクリ関連リンク */}}
+        <ul>
+          {{ range index .Site.Menus "links" }}
+            {{ $iconPath := print "img/icons/" .Identifier ".svg" }}
 
 
-          <li class="menu__item">
-            <a
-              href="{{ .URL }}"
-              rel="noopener"
-              target="_blank"
-            >
-              {{ (resources.Get $iconPath).Content | safeHTML }}
-              {{ .Name }}
-              {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
-            </a>
-          </li>
-        {{ end }}
-      </ul>
+            <li>
+              <a
+                href="{{ .URL }}"
+                rel="noopener"
+                target="_blank"
+                class="menu__item"
+              >
+                {{ (resources.Get $iconPath).Content | safeHTML }}
+                {{ .Name }}
+                {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
     </header>
 
-    <main class="body__main">
+    <main class="main">
       {{ block "main" . }}
       {{ end }}
     </main>
 
-    <footer class="body__footer">
+    <footer class="footer">
       <small>© 2023 デジクリ</small>
     </footer>
   </body>

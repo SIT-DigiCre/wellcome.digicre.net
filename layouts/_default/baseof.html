@@ -45,7 +45,7 @@
 
       {{/* ヘッダー */}}
       <div class="header__container">
-        {{/* デジクリのロゴ */}}
+        {{/* ロゴ */}}
         {{ with resources.Get "img/logo.svg" }}
           {{ .Content | safeHTML }}
         {{ end }}
@@ -58,13 +58,10 @@
           </ul>
         </nav>
 
-        {{/* デジクリの関連リンク */}}
+        {{/* 関連リンク */}}
         <nav class="menu">
           <ul>
             {{ range index .Site.Menus "links" }}
-              {{ $iconPath := print "img/icons/" .Identifier ".svg" }}
-
-
               <li>
                 <a
                   href="{{ .URL }}"
@@ -72,8 +69,13 @@
                   target="_blank"
                   class="menu__item"
                 >
-                  {{ (resources.Get $iconPath).Content | safeHTML }}
+                  {{/* アイコン */}}
+                  {{ (resources.Get (print "img/icons/" .Identifier ".svg")).Content | safeHTML }}
+
+                  {{/* タイトル */}}
                   {{ .Name }}
+
+                  {{/* 新規タブで開くアイコン */}}
                   {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
                 </a>
               </li>

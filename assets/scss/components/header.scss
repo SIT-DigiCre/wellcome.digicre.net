@@ -15,14 +15,17 @@
     inline-size: 25%;
   }
 
-  > svg {
-    block-size: 48px;
-    display: block;
-    margin-inline: auto;
-  }
-
   > * + * {
     margin-block-start: 32px;
+  }
+}
+
+.header__logo {
+  display: table;
+  margin-inline: auto;
+
+  > svg {
+    display: block;
   }
 }
 

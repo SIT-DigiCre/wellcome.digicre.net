@@ -46,9 +46,12 @@
       {{/* ヘッダー */}}
       <div class="header__container">
         {{/* ロゴ */}}
-        {{ with resources.Get "img/logo.svg" }}
-          {{ .Content | safeHTML }}
-        {{ end }}
+        <a
+          href="{{ .Site.Home.Permalink }}"
+          class="header__logo"
+        >
+          {{ (resources.Get "img/logo.svg").Content | safeHTML }}
+        </a>
 
         {{/* 目次 */}}
         <nav class="menu">

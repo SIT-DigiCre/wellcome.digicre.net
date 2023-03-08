@@ -1,0 +1,18 @@
+{{ with .Site.GetPage "/faq" }}
+  <div
+    class="faq"
+    id="faq"
+  >
+    <h2>{{ .Title }}</h2>
+
+    <div class="faq__container">
+      {{ range .CurrentSection.RegularPages }}
+        <article class="faq__card">
+          <h3>{{ .Title }}</h3>
+
+          {{ .Content }}
+        </article>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

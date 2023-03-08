@@ -1,0 +1,10 @@
+{{ with .Site.GetPage "/about-us" }}
+  <article
+    class="about-us"
+    id="about-us"
+  >
+    <h2>{{ .Title }}</h2>
+
+    {{ .Content }}
+  </article>
+{{ end }}

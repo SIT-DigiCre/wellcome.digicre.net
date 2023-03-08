@@ -1,0 +1,19 @@
+{{ with .Site.GetPage "/schedule" }}
+  <div
+    class="schedule"
+    id="schedule"
+  >
+    <h2>{{ .Title }}</h2>
+
+    {{ range index .Site.Menus "schedule" }}
+      <iframe
+        frameborder="0"
+        height="480"
+        scrolling="no"
+        src="{{ .URL }}"
+        width="300"
+      >
+      </iframe>
+    {{ end }}
+  </div>
+{{ end }}

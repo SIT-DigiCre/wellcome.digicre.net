@@ -1,0 +1,34 @@
+{{ with .Site.GetPage "/teams" }}
+  <div
+    class="teams"
+    id="teams"
+  >
+    <h2>{{ .Title }}</h2>
+
+    <div class="teams__container">
+      {{ range index .Site.Menus "teams" }}
+        {{ if ne .URL "" }}
+          <a
+            href="{{ .URL }}"
+            rel="noopener"
+            target="_blank"
+          >
+            <article class="teams__card">
+              <h3>
+                {{ .Name }}
+                {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
+              </h3>
+            </article>
+          </a>
+        {{ else }}
+          <a>
+            <article class="teams__card">
+              <h3>{{ .Name }}</h3>
+            </article>
+          </a>
+        {{ end }}
+
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

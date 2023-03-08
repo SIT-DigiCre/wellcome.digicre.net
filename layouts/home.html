@@ -53,3 +53,12 @@
   {{ end }}
 
 {{ end }}
+
+{{ define "script" }}
+  {{ with resources.Get "js/toc.js" | js.Build | resources.Fingerprint }}
+    <script
+      src="{{ .Permalink }}"
+      defer
+    ></script>
+  {{ end }}
+{{ end }}

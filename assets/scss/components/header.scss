@@ -2,12 +2,15 @@
   background: #202020;
   block-size: 100%;
   color: #fff;
+  display: flex;
+  flex-direction: column;
   inline-size: 100%;
   left: 0;
   overflow-y: auto;
   padding-block: 64px;
   padding-inline: 16px;
   position: fixed;
+  row-gap: 32px;
   top: 0;
   z-index: 1;
 
@@ -15,8 +18,8 @@
     inline-size: 25%;
   }
 
-  > * + * {
-    margin-block-start: 32px;
+  > * {
+    flex-shrink: 0;
   }
 }
 
@@ -33,38 +36,21 @@
   display: none;
 
   &:not(:checked) ~ .header__container {
-    display: none;
-
-    @media screen and(min-width: 1024px) {
-      display: block;
+    @media not (max-width: (1024px - 1px)) {
+      display: none;
     }
   }
 
-  &:checked + .header__toggle-button {
-    background: none;
-    box-shadow: none;
-
-    > svg {
-      &:first-child {
-        display: none;
-      }
-
-      &:last-child {
-        display: block;
-      }
-    }
+  &:checked + .header__toggle-button--open {
+    display: none;
   }
 }
 
 .header__toggle-button {
-  background: #00b0f0;
-  border-radius: 0 0 16px 0;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
   left: 0;
   padding: 16px;
-  position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 
   @media screen and (min-width: 1024px) {
     display: none;
@@ -76,13 +62,17 @@
 
   > svg {
     color: #fff;
-
-    &:first-child {
-      display: block;
-    }
-
-    &:last-child {
-      display: none;
-    }
+    display: block;
   }
+}
+
+.header__toggle-button--open {
+  background: #00b0f0;
+  border-radius: 0 0 16px 0;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+
+.header__toggle-button--close {
+  position: absolute;
 }

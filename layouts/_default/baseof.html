@@ -34,17 +34,24 @@
         class="header__toggle"
       />
 
-      {{/* ヘッダー開閉ボタン */}}
+      {{/* ヘッダー開ボタン */}}
       <label
         for="header-toggle"
-        class="header__toggle-button"
+        class="header__toggle-button header__toggle-button--open"
       >
         {{ (resources.Get "img/icons/menu.svg").Content | safeHTML }}
-        {{ (resources.Get "img/icons/close.svg").Content | safeHTML }}
       </label>
 
       {{/* ヘッダー */}}
       <div class="header__container">
+        {{/* ヘッダー閉ボタン */}}
+        <label
+          for="header-toggle"
+          class="header__toggle-button header__toggle-button--close"
+        >
+          {{ (resources.Get "img/icons/close.svg").Content | safeHTML }}
+        </label>
+
         {{/* ロゴ */}}
         <a
           href="{{ .Site.Home.Permalink }}"

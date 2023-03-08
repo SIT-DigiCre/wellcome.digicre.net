@@ -31,13 +31,13 @@
         type="checkbox"
         name="toggle"
         id="header-toggle"
-        class="toggle"
+        class="header__toggle"
       />
 
       {{/* ヘッダー開閉ボタン */}}
       <label
         for="header-toggle"
-        class="toggle-button toggle-button--open"
+        class="header__toggle-button"
       >
         {{ (resources.Get "img/icons/menu.svg").Content | safeHTML }}
         {{ (resources.Get "img/icons/close.svg").Content | safeHTML }}

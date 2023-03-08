@@ -7,27 +7,22 @@
 
     <div class="teams__container">
       {{ range index .Site.Menus "teams" }}
-        {{ if ne .URL "" }}
-          <a
-            href="{{ .URL }}"
-            rel="noopener"
-            target="_blank"
-          >
-            <article class="teams__card">
-              <h3>
+        <article class="teams__card">
+          <h3>
+            {{ if .URL }}
+              <a
+                href="{{ .URL }}"
+                rel="noopener"
+                target="_blank"
+              >
                 {{ .Name }}
                 {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
-              </h3>
-            </article>
-          </a>
-        {{ else }}
-          <a>
-            <article class="teams__card">
-              <h3>{{ .Name }}</h3>
-            </article>
-          </a>
-        {{ end }}
-
+              </a>
+            {{ else }}
+              {{ .Name }}
+            {{ end }}
+          </h3>
+        </article>
       {{ end }}
     </div>
   </div>

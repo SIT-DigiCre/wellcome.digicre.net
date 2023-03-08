@@ -24,27 +24,38 @@
 }
 
 .teams__card {
+  align-items: flex-end;
   aspect-ratio: 16/9;
   background: #000;
   border-radius: 16px;
   color: #fff;
   display: flex;
-  align-items: flex-end;
+  overflow: hidden;
   padding: 16px;
-
-  &:hover {
-  }
+  position: relative;
 
   > h3 {
-    align-items: center;
-    display: flex;
     font-feature-settings: "palt";
     font-size: var(--heading-size);
     font-weight: 700;
 
-    > svg {
-      block-size: 1em;
-      inline-size: 1em;
+    > a {
+      align-items: center;
+      display: flex;
+
+      &::before {
+        block-size: 100%;
+        content: "";
+        inline-size: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+
+      > svg {
+        block-size: 1em;
+        inline-size: 1em;
+      }
     }
   }
 }

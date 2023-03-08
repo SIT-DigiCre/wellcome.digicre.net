@@ -1,4 +1,4 @@
-.header {
+.header__container {
   background: #202020;
   block-size: 100%;
   color: #fff;
@@ -26,10 +26,10 @@
   }
 }
 
-.toggle {
+.header__toggle {
   display: none;
 
-  &:not(:checked) ~ .header {
+  &:not(:checked) ~ .header__container {
     display: none;
 
     @media screen and(min-width: 1024px) {
@@ -37,7 +37,7 @@
     }
   }
 
-  &:checked + .toggle-button {
+  &:checked + .header__toggle-button {
     background: none;
     box-shadow: none;
 
@@ -53,7 +53,7 @@
   }
 }
 
-.toggle-button {
+.header__toggle-button {
   background: #00b0f0;
   border-radius: 0 0 16px 0;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);

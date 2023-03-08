@@ -8,6 +8,7 @@
     />
     <title>{{ .Site.Title }}</title>
 
+    {{/* The New CSS Reset */}}
     {{ with resources.GetRemote "https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.min.css" }}
       <link
         rel="stylesheet"
@@ -15,6 +16,7 @@
       />
     {{ end }}
 
+    {{/* CSS */}}
     {{ with resources.Get "scss/style.scss" | resources.ToCSS | resources.Fingerprint }}
       <link
         rel="stylesheet"
@@ -23,60 +25,62 @@
     {{ end }}
   </head>
   <body class="body">
-    <input
-      type="checkbox"
-      name="toggle"
-      id="header-toggle"
-      class="toggle"
-    />
+    <header class="header">
+      {{/* トグル */}}
+      <input
+        type="checkbox"
+        name="toggle"
+        id="header-toggle"
+        class="toggle"
+      />
 
-    <label
-      for="header-toggle"
-      class="toggle-button toggle-button--open"
-    >
-      {{ (resources.Get "img/icons/menu.svg").Content | safeHTML }}
-      {{ (resources.Get "img/icons/close.svg").Content | safeHTML }}
-    </label>
+      {{/* ヘッダー開閉ボタン */}}
+      <label
+        for="header-toggle"
+        class="toggle-button toggle-button--open"
+      >
+        {{ (resources.Get "img/icons/menu.svg").Content | safeHTML }}
+        {{ (resources.Get "img/icons/close.svg").Content | safeHTML }}
+      </label>
 
-    <header
-      class="header"
-      id="header"
-    >
-      {{/* ロゴ */}}
-      {{ with resources.Get "img/logo.svg" }}
-        {{ .Content | safeHTML }}
-      {{ end }}
+      {{/* ヘッダー */}}
+      <div class="header__container">
+        {{/* デジクリのロゴ */}}
+        {{ with resources.Get "img/logo.svg" }}
+          {{ .Content | safeHTML }}
+        {{ end }}
 
-      {{/* 目次 */}}
-      <nav class="menu">
-        <ul>
-          {{ block "toc" . }}
-          {{ end }}
-        </ul>
-      </nav>
+        {{/* 目次 */}}
+        <nav class="menu">
+          <ul>
+            {{ block "toc" . }}
+            {{ end }}
+          </ul>
+        </nav>
 
-      <nav class="menu">
-        {{/* デジクリ関連リンク */}}
-        <ul>
-          {{ range index .Site.Menus "links" }}
-            {{ $iconPath := print "img/icons/" .Identifier ".svg" }}
+        {{/* デジクリの関連リンク */}}
+        <nav class="menu">
+          <ul>
+            {{ range index .Site.Menus "links" }}
+              {{ $iconPath := print "img/icons/" .Identifier ".svg" }}
 
 
-            <li>
-              <a
-                href="{{ .URL }}"
-                rel="noopener"
-                target="_blank"
-                class="menu__item"
-              >
-                {{ (resources.Get $iconPath).Content | safeHTML }}
-                {{ .Name }}
-                {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
-              </a>
-            </li>
-          {{ end }}
-        </ul>
-      </nav>
+              <li>
+                <a
+                  href="{{ .URL }}"
+                  rel="noopener"
+                  target="_blank"
+                  class="menu__item"
+                >
+                  {{ (resources.Get $iconPath).Content | safeHTML }}
+                  {{ .Name }}
+                  {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main">

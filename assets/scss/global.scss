@@ -1,0 +1,16 @@
+:root {
+  --title-size: 1.5rem;
+  --heading-size: 1rem;
+
+  @media screen and(min-width: 768px) {
+    --title-size: 2rem;
+    --heading-size: 1.5rem;
+  }
+}
+
+html {
+  font-family: "Inter", "Source Han Sans";
+  font-size: 100%;
+  line-height: 1.25;
+  scroll-behavior: smooth;
+}

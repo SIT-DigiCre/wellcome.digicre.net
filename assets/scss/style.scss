@@ -1,3 +1,4 @@
+@import "./global.scss";
 @import "./components/body.scss";
 @import "./components/header.scss";
 @import "./components/menu.scss";
@@ -8,19 +9,3 @@
 @import "./components/home/pv.scss";
 @import "./components/home/schedule.scss";
 @import "./components/home/teams.scss";
-
-html {
-  font-family: "Inter", "Source Han Sans";
-  line-height: 1.25;
-  scroll-behavior: smooth;
-}
-
-:root {
-  --title-size: 1.5rem;
-  --heading-size: 1rem;
-
-  @media screen and(min-width: 768px) {
-    --title-size: 2rem;
-    --heading-size: 1.5rem;
-  }
-}

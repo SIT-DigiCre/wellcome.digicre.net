@@ -1,5 +1,7 @@
 baseURL: "https://digicre.net/welcome/"
 title: "デジクリ"
+disableHugoGeneratorInject: true
+hasCJKLanguage: true
 
 disableKinds:
   - "taxonomy"

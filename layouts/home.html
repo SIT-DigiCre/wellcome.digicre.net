@@ -55,7 +55,7 @@
 {{ end }}
 
 {{ define "script" }}
-  {{ with resources.Get "js/toc.ts" | js.Build | resources.Fingerprint }}
+  {{ with resources.Get "js/toc.ts" | js.Build | minify | resources.Fingerprint }}
     <script
       src="{{ .Permalink }}"
       defer

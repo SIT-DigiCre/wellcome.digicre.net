@@ -7,13 +7,12 @@
 
     {{ range index .Site.Menus "schedule" }}
       <iframe
-        frameborder="0"
-        height="480"
-        scrolling="no"
         src="{{ .URL }}"
-        width="300"
-      >
-      </iframe>
+        width="320"
+        height="240"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
     {{ end }}
   </div>
 {{ end }}

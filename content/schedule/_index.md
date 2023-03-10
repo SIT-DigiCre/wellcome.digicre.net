@@ -1,6 +1,6 @@
 ---
 title: "新歓スケジュール"
-weight: 30
+weight: 19
 _build:
   render: "never"
 ---

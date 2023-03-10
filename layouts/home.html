@@ -2,17 +2,11 @@
   {{/* PV */}}
   {{ partial "home/pv.html" . }}
 
-  {{/* デジクリとは？ */}}
-  {{ partial "home/about-us.html" . }}
-
-  {{/* 班紹介 */}}
-  {{ partial "home/teams.html" . }}
-
-  {{/* 新歓スケジュール */}}
-  {{ partial "home/schedule.html" . }}
-
-  {{/* よくある質問 */}}
-  {{ partial "home/faq.html" . }}
+  {{/* content 以下の各セクション */}}
+  {{ range .Site.Sections.ByWeight }}
+    {{ $id :=  path.Dir .File.Dir }}
+    {{ partial (path.Join "home" $id) . }}
+  {{ end }}
 
   {{/* 興味がありますか？ */}}
   {{ partial "home/join-us.html" . }}

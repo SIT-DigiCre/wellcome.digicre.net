@@ -63,5 +63,7 @@ menu:
   schedule:
     - identifier: "events"
       url: "https://calendar.google.com/calendar/embed?height=320&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&title&showTitle=0&showNav=1&showPrint=0&showCalendars=0&showTz=0&hl=ja&mode=AGENDA&src=c2l0ZGlnaWNyZWNpcmNsZUBnbWFpbC5jb20&color=%23138fcc"
+      weight: 10
     - identifier: "calendar"
       url: "https://calendar.google.com/calendar/embed?height=320&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&title&showTitle=0&showNav=1&showPrint=0&showCalendars=0&showTz=0&hl=ja&src=c2l0ZGlnaWNyZWNpcmNsZUBnbWFpbC5jb20&color=%23138fcc"
+      weight: 20

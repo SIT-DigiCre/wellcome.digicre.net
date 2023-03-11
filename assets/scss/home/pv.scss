@@ -3,6 +3,7 @@
   block-size: 100svh;
   inline-size: 100%;
   position: relative;
+  z-index: 0;
 
   @media screen and (min-width: 768px) {
     aspect-ratio: 4/3;
@@ -17,7 +18,6 @@
   block-size: 100%;
   inline-size: 100%;
   position: absolute;
-  z-index: 0;
 }
 
 .pv__scroll-nav {

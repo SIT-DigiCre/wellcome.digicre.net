@@ -9,10 +9,10 @@
     font-weight: 700;
     margin-block-end: 32px;
   }
-}
 
-.events__container {
   table {
+    inline-size: 100%;
+
     > thead {
       > tr {
         background: #606060;
@@ -44,6 +44,10 @@
             font-size: var(--heading-size);
             font-weight: 700;
             text-align: center;
+          }
+
+          &:not(:first-child) {
+            line-height: 1.5;
           }
         }
       }

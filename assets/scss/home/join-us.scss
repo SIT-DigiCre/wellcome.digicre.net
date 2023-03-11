@@ -5,7 +5,7 @@
   }
 }
 
-.join-us__content {
+.join-us__contents {
   background: #606060;
   color: #fff;
   padding-block: 64px;
@@ -18,8 +18,12 @@
     margin-block-end: 32px;
   }
 
-  > p:not(:last-child) {
-    margin-block-end: 8px;
+  > p {
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-block-end: 8px;
+    }
   }
 }
 

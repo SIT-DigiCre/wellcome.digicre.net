@@ -1,0 +1,12 @@
+{{ with .Site.GetPage "/events" }}
+  <article
+    class="events"
+    id="events"
+  >
+    <h2>{{ .Title }}</h2>
+
+    <div class="events__container">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}

@@ -9,7 +9,7 @@
     <title>{{ .Site.Title }}</title>
 
     {{/* The New CSS Reset */}}
-    {{ with resources.GetRemote "https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.css" }}
+    {{ with resources.GetRemote "https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.css" | minify }}
       <link
         rel="stylesheet"
         href="{{ .Permalink }}"

@@ -1,10 +1,12 @@
 {{ with .Site.GetPage "/join-us" }}
-  <article class="join-us">
-    <div class="join-us__contents">
+  <div class="join-us">
+    <article class="join-us__container">
       <h2>{{ .Title }}</h2>
 
-      {{ .Content }}
-    </div>
+      <div class="join-us__contents">
+        {{ .Content }}
+      </div>
+    </article>
 
     {{ range first 1 (index .Site.Menus "join-us") }}
       <a
@@ -18,5 +20,5 @@
         {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
       </a>
     {{ end }}
-  </article>
+  </div>
 {{ end }}

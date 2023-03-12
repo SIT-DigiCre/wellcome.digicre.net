@@ -12,6 +12,8 @@
 }
 
 .teams__contents {
+  margin-block-end: 32px;
+
   *:where(:not(:last-child)) {
     line-height: 1.5;
     margin-block-end: 8px;
@@ -26,6 +28,10 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  strong {
+    font-weight: 700;
   }
 }
 

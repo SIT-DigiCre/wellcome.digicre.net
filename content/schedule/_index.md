@@ -5,4 +5,4 @@ _build:
   render: "never"
 ---
 
-are
+必要に応じて、ここにも**説明テキスト**や[リンク](https://example.com)を挿入することができる。

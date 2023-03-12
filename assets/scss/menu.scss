@@ -29,6 +29,7 @@
   background: #00b0f0;
   column-gap: 0;
   justify-content: center;
+  transition: background-color ease 0.3s;
 
   &:hover {
     background: #70d9ff;

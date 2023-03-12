@@ -37,6 +37,7 @@
   font-weight: 700;
   justify-content: center;
   padding: 32px;
+  transition: background-color ease 0.3s;
 
   &:hover {
     background: #70d9ff;

@@ -31,7 +31,12 @@
   padding: 16px;
   position: absolute;
   right: 0;
+  transition: background-color ease 0.3s;
   writing-mode: vertical-lr;
+
+  &:hover {
+    background: #00b0f0;
+  }
 
   > svg {
     block-size: 1em;

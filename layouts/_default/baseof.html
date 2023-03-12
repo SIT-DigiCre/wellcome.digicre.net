@@ -9,7 +9,7 @@
     <title>{{ .Site.Title }}</title>
 
     {{/* The New CSS Reset */}}
-    {{ with resources.GetRemote "https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.min.css" }}
+    {{ with resources.GetRemote "https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.css" }}
       <link
         rel="stylesheet"
         href="{{ .Permalink }}"
@@ -23,6 +23,28 @@
         href="{{ .Permalink }}"
       />
     {{ end }}
+
+    {{/* Google Fonts */}}
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      data-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+      id="google-fonts"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
   <body class="body">
     <header class="header">
@@ -104,6 +126,12 @@
       <small>© 2023 デジクリ</small>
     </footer>
 
+    {{ with resources.Get "js/font.ts" | js.Build | minify | resources.Fingerprint }}
+      <script
+        src="{{ .Permalink }}"
+        defer
+      ></script>
+    {{ end }}
     {{ block "script" . }}
     {{ end }}
   </body>

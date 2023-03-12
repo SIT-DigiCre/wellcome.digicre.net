@@ -8,20 +8,40 @@
     <div class="teams__container">
       {{ range index .Site.Menus "teams" }}
         <article class="teams__card">
-          <h3>
-            {{ if .URL }}
-              <a
-                href="{{ .URL }}"
-                rel="noopener"
-                target="_blank"
-              >
+          {{ $img := print "img/teams/" .Identifier ".webp" }}
+
+          {{ if .URL }}
+            <a
+              href="{{ .URL }}"
+              rel="noopener"
+              target="_blank"
+            >
+              {{ with resources.Get $img }}
+                <img
+                  src="{{ .Permalink }}"
+                  alt
+                />
+              {{ end }}
+
+
+              <h3>
                 {{ .Name }}
                 {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
-              </a>
-            {{ else }}
-              {{ .Name }}
+              </h3>
+            </a>
+          {{ else }}
+            {{ with resources.Get $img }}
+              <img
+                src="{{ .Permalink }}"
+                alt
+              />
             {{ end }}
-          </h3>
+
+
+            <h3>
+              {{ .Name }}
+            </h3>
+          {{ end }}
         </article>
       {{ end }}
     </div>

@@ -8,6 +8,14 @@
     />
     <title>{{ .Site.Title }}</title>
 
+    {{/* For preview build */}}
+    {{ if eq hugo.Environment "development" }}
+      <meta
+        name="robots"
+        content="noindex"
+      />
+    {{ end }}
+
     {{/* The New CSS Reset */}}
     {{ with resources.GetRemote "https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.css" | minify }}
       <link

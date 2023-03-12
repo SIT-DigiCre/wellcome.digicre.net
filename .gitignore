@@ -16,6 +16,9 @@ hugo.linux
 # Temporary lock file while building
 /.hugo_build.lock
 
+# Config files for development environment
+config/development
+
 ### Node ###
 # Logs
 logs

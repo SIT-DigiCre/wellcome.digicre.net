@@ -1,0 +1,43 @@
+{{/* og:title */}}
+<meta
+  property="og:title"
+  content="{{ .Title }}"
+/>
+
+{{/* og:description */}}
+<meta
+  property="og:description"
+  content="{{ .Site.Params.description }}"
+/>
+
+{{/* og:type */}}
+<meta
+  property="og:type"
+  content="website"
+/>
+
+{{/* og:url */}}
+<meta
+  property="og:url"
+  content="{{ .Permalink | absURL }}"
+/>
+
+{{/* og:image */}}
+{{ with resources.Get "img/ogp.png" }}
+  <meta
+    property="og:image"
+    content="{{ .Permalink | absURL }}"
+  />
+{{ end }}
+
+{{/* og:locale */}}
+<meta
+  property="og:locale"
+  content="ja"
+/>
+
+{{/* og:site_name */}}
+<meta
+  property="og:site_name"
+  content="{{ .Site.Title }}"
+/>

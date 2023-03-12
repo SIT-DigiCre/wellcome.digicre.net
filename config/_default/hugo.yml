@@ -8,6 +8,11 @@ disableKinds:
   - "term"
   - "RSS"
 
+params:
+  description: ""
+  images:
+    - "img/ogp.png"
+
 menu:
   join-us:
     - name: "参加申込"

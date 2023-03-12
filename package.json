@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "hugo server",
+    "preview": "hugo server",
+    "dev": "hugo -e development",
     "build": "hugo --minify"
   },
   "devDependencies": {

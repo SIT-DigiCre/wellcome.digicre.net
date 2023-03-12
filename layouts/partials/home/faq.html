@@ -10,7 +10,9 @@
         <article class="faq__card">
           <h3>{{ .Title }}</h3>
 
-          {{ .Content }}
+          <div class="faq__contents">
+            {{ .Content }}
+          </div>
         </article>
       {{ end }}
     </div>

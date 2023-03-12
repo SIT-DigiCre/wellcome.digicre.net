@@ -21,17 +21,21 @@
   border-radius: 16px;
   padding: 32px;
 
-  *:where(:not(:last-child)) {
-    line-height: 1.5;
-    margin-block-end: 8px;
-  }
-
   > h3 {
     font-feature-settings: "palt";
     font-size: var(--heading-size);
     font-weight: 700;
-    line-height: 1.25;
     margin-block-end: 16px;
+  }
+}
+
+.faq__contents {
+  * {
+    line-height: 1.5;
+
+    &:where(:not(:last-child)) {
+      margin-block-end: 8px;
+    }
   }
 
   a:any-link {

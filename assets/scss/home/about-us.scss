@@ -13,9 +13,12 @@
 }
 
 .about-us__contents {
-  *:where(:not(:last-child)) {
+  * {
     line-height: 1.5;
-    margin-block-end: 8px;
+
+    &:where(:not(:last-child)) {
+      margin-block-end: 8px;
+    }
   }
 
   a:any-link {

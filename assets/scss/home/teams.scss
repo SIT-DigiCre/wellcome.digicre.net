@@ -11,6 +11,24 @@
   }
 }
 
+.teams__contents {
+  *:where(:not(:last-child)) {
+    line-height: 1.5;
+    margin-block-end: 8px;
+  }
+
+  a:any-link {
+    align-items: center;
+    color: rgb(0, 90, 255);
+    display: inline-flex;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .teams__container {
   display: grid;
   gap: 32px;

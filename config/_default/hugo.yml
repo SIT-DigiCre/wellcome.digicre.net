@@ -10,8 +10,6 @@ disableKinds:
 
 params:
   description: ""
-  images:
-    - "img/ogp.png"
 
 menu:
   join-us:

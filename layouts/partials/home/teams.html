@@ -5,6 +5,13 @@
   >
     <h2>{{ .Title }}</h2>
 
+    {{ with .Content }}
+      <div class="teams__contents">
+        {{ . }}
+      </div>
+    {{ end }}
+
+
     <div class="teams__container">
       {{ range index .Site.Menus "teams" }}
         <article class="teams__card">

@@ -4,18 +4,16 @@
   padding-block: 64px;
   padding-inline: 32px;
 
+  *:where(:not(:last-child)) {
+    line-height: 1.5;
+    margin-block-end: 8px;
+  }
+
   > h2 {
     font-feature-settings: "palt";
     font-size: var(--title-size);
     font-weight: 700;
+    line-height: 1.25;
     margin-block-end: 32px;
-  }
-
-  p {
-    line-height: 1.5;
-
-    &:not(:last-child) {
-      margin-block-end: 8px;
-    }
   }
 }

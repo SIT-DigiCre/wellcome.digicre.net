@@ -1,0 +1,8 @@
+<a
+  href="{{ .Destination | safeURL }}"
+  rel="noopener"
+  target="_blank"
+>
+  {{ .Text }}
+  {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
+</a>

@@ -5,6 +5,12 @@
   >
     <h2>{{ .Title }}</h2>
 
+    {{ with .Content }}
+      <div class="schedule__contents">
+        {{ . }}
+      </div>
+    {{ end }}
+
     {{ range first 1 (index .Site.Menus "schedule") }}
       <iframe
         src="{{ .URL }}"

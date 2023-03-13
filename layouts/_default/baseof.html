@@ -15,6 +15,9 @@
     {{/* OGP */}}
     {{ partial  "ogp.html" . }}
 
+    {{/* Favicon */}}
+    {{ partial  "favicon.html" . }}
+
     {{/* For preview build */}}
     {{ if eq hugo.Environment "development" }}
       <meta

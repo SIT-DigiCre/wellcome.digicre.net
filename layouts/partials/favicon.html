@@ -1,0 +1,27 @@
+{{/* cf. https://coliss.com/articles/build-websites/operation/work/how-to-favicon.html */}}
+
+{{/* Favicon */}}
+{{ with resources.Get "favicon.ico" }}
+  <link
+    rel="icon"
+    href="{{ .Permalink }}"
+    sizes="any"
+  />
+{{ end }}
+
+{{/* SVG Favicon */}}
+{{ with resources.Get "favicon.svg" }}
+  <link
+    rel="icon"
+    href="{{ .Permalink }}"
+    type="image/svg+xml"
+  />
+{{ end }}
+
+{{/* apple-touch-icon */}}
+{{ with resources.Get "apple-touch-icon.png" }}
+  <link
+    rel="apple-touch-icon"
+    href="{{ .Permalink }}"
+  />
+{{ end }}

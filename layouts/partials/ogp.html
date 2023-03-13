@@ -23,7 +23,7 @@
 />
 
 {{/* og:image */}}
-{{ with resources.Get "img/ogp.png" }}
+{{ with resources.Get "img/ogp.png" | resources.Fingerprint }}
   <meta
     property="og:image"
     content="{{ .Permalink | absURL }}"

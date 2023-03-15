@@ -1,0 +1,12 @@
+{{ with .Site.GetPage "/schedule" }}
+  <article
+    class="schedule"
+    id="schedule"
+  >
+    <h2>{{ .Title }}</h2>
+
+    <div class="schedule__content">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}

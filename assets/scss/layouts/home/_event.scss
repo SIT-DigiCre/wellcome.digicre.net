@@ -1,4 +1,4 @@
-.schedule {
+.event {
   @include section($background: #fff, $color: #000);
 
   > h2 {
@@ -6,11 +6,11 @@
   }
 }
 
-.schedule__content {
+.event__content {
   @include markdown-content;
 }
 
-.schedule__google-calendar {
+.event__google-calendar {
   aspect-ratio: 4 / 3;
   background: #e3e9ff; // Google Calendar の色
   block-size: auto;

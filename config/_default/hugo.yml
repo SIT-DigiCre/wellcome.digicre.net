@@ -36,6 +36,10 @@ menu:
     - identifier: "pv"
       name: "デジクリ紹介動画"
       url: "https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&controls=0&playlist=EaFvRsJAV9U"
+  event:
+    - identifier: "calendar"
+      name: "新歓スケジュール"
+      url: "https://calendar.google.com/calendar/embed?height=320&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&title&showTitle=0&showNav=1&showPrint=0&showCalendars=0&showTz=0&hl=ja&src=c2l0ZGlnaWNyZWNpcmNsZUBnbWFpbC5jb20&color=%23138fcc"
   teams:
     - identifier: "pg"
       name: "PG 班"
@@ -69,7 +73,3 @@ menu:
       name: "SysDev 班"
       url: ""
       weight: 80
-  schedule:
-    - identifier: "events"
-      name: "新歓スケジュール"
-      url: "https://calendar.google.com/calendar/embed?height=320&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&title&showTitle=0&showNav=1&showPrint=0&showCalendars=0&showTz=0&hl=ja&src=c2l0ZGlnaWNyZWNpcmNsZUBnbWFpbC5jb20&color=%23138fcc"

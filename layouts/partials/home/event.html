@@ -1,17 +1,17 @@
-{{ with .Site.GetPage "/schedule" }}
+{{ with .Site.GetPage "/event" }}
   <article
-    class="schedule"
-    id="schedule"
+    class="event"
+    id="event"
   >
     <h2>{{ .Title }}</h2>
 
     {{ with .Content }}
-      <div class="schedule__content">
+      <div class="event__content">
         {{ . }}
       </div>
     {{ end }}
 
-    {{ range first 1 (index .Site.Menus "schedule") }}
+    {{ range first 1 (index .Site.Menus "event") }}
       <iframe
         src="{{ .URL }}"
         width="320"
@@ -20,7 +20,7 @@
         scrolling="no"
         loading="lazy"
         title="{{ .Name }}"
-        class="schedule__google-calendar"
+        class="event__google-calendar"
       ></iframe>
     {{ end }}
   </article>

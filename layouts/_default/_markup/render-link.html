@@ -1,5 +1,5 @@
 <a
-  href="{{ .Destination | safeURL }}"
+  href="{{ .Destination | absURL | safeURL }}"
   rel="noopener"
   target="_blank"
 >

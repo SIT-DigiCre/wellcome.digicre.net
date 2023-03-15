@@ -1,5 +1,14 @@
 .body {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+
   @include view($min-width: $tablet-landscape) {
     margin-inline-start: var(--header-inline-size);
+  }
+
+  > main {
+    flex-grow: 1;
   }
 }

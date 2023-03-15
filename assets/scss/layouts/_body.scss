@@ -1,5 +1,5 @@
 .body {
   @include view($min-width: $tablet-landscape) {
-    margin-inline-start: $header-inline-size;
+    margin-inline-start: var(--header-inline-size);
   }
 }

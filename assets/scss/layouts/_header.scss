@@ -4,7 +4,7 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  inline-size: 100%;
+  inline-size: var(--header-inline-size);
   left: 0;
   overflow-y: auto;
   padding-block: 64px;
@@ -13,10 +13,6 @@
   row-gap: 32px;
   top: 0;
   z-index: 1;
-
-  @include view($min-width: $tablet-landscape) {
-    inline-size: $header-inline-size;
-  }
 
   > * {
     flex-shrink: 0;

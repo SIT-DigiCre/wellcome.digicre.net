@@ -1,10 +1,12 @@
 :root {
   --title-size: 1.5rem;
   --heading-size: 1rem;
+  --header-inline-size: 100%;
 
   @include view($min-width: $tablet-portrait) {
     --title-size: 2rem;
     --heading-size: 1.5rem;
+    --header-inline-size: 25%;
   }
 }
 

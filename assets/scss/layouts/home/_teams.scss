@@ -13,7 +13,7 @@
   @extend %markdown-content;
 }
 
-.teams__container {
+.teams__wrapper {
   display: grid;
   gap: 32px;
   grid-template-columns: repeat(

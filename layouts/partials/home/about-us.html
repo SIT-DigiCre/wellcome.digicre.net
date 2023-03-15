@@ -1,12 +1,24 @@
 {{ with .Site.GetPage "/about-us" }}
-  <article
+  <div
     class="about-us"
     id="about-us"
   >
-    <h2>{{ .Title }}</h2>
+    <article class="about-us__section">
+      <h2>{{ .Title }}</h2>
 
-    <div class="about-us__content">
-      {{ .Content }}
-    </div>
-  </article>
+      <div class="about-us__content">
+        {{ .Content }}
+      </div>
+    </article>
+
+    {{ with resources.Get "img/about-us.webp" }}
+      <img
+        src="{{ .Permalink }}"
+        alt
+        loading="lazy"
+        decoding="async"
+        class="about-us__img"
+      />
+    {{ end }}
+  </div>
 {{ end }}

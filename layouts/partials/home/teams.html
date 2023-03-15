@@ -12,7 +12,7 @@
     {{ end }}
 
 
-    <div class="teams__container">
+    <div class="teams__wrapper">
       {{ range index .Site.Menus "teams" }}
         <article class="teams__card">
           {{ $img := print "img/teams/" .Identifier ".webp" }}

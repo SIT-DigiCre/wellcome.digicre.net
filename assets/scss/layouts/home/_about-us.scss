@@ -1,4 +1,11 @@
 .about-us {
+  @include view($min-width: $tablet-portrait) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.about-us__section {
   @extend %section;
 
   background: $digicre-blue;
@@ -15,4 +22,10 @@
   a:any-link {
     color: inherit;
   }
+}
+
+.about-us__img {
+  background: #404040;
+  block-size: 100%;
+  object-fit: cover;
 }

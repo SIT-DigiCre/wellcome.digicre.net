@@ -1,4 +1,4 @@
-.header__container {
+.header__wrapper {
   background: #202020;
   block-size: 100%;
   color: #fff;
@@ -22,7 +22,7 @@
 .header__toggle {
   display: none;
 
-  &:not(:checked) ~ .header__container {
+  &:not(:checked) ~ .header__wrapper {
     @include view($max-width: $tablet-landscape) {
       display: none;
     }

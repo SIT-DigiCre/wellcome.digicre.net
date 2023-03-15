@@ -5,7 +5,7 @@
   }
 }
 
-.join-us__container {
+.join-us__section {
   @extend %section;
 
   background: #404040;
@@ -21,6 +21,7 @@
 }
 
 .join-us__button {
+  @extend %section;
   @extend %heading;
 
   align-items: center;
@@ -28,7 +29,6 @@
   color: #fff;
   display: flex;
   justify-content: center;
-  padding: 32px;
   transition: background-color ease 0.3s;
 
   &:hover {

@@ -16,17 +16,14 @@
 .teams__container {
   display: grid;
   gap: 32px;
-
-  @include view($min-width: $tablet-portrait) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @include view($min-width: $pc) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(unquote("min(320px, 100%)"), 1fr)
+  );
 }
 
 .teams__card {
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   background: #000;
   border-radius: 16px;
   color: #fff;

@@ -144,7 +144,7 @@
       <small>© 2023 デジクリ</small>
     </footer>
 
-    {{ with resources.Get "js/font.ts" | js.Build | minify | resources.Fingerprint }}
+    {{ with resources.Get "js/index.ts" | js.Build | minify | resources.Fingerprint }}
       <script
         src="{{ .Permalink }}"
         defer

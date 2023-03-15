@@ -7,19 +7,19 @@
   > h2 {
     @extend %title;
   }
-
-  > iframe {
-    aspect-ratio: 4 / 3;
-    background: #e3e9ff; // Google Calendar の色
-    block-size: auto;
-    inline-size: 100%;
-
-    @include view($tablet-portrait) {
-      aspect-ratio: 16 / 9;
-    }
-  }
 }
 
 .schedule__contents {
   @extend %markdown-content;
+}
+
+.schedule__google-calendar {
+  aspect-ratio: 4 / 3;
+  background: #e3e9ff; // Google Calendar の色
+  block-size: auto;
+  inline-size: 100%;
+
+  @include view($tablet-portrait) {
+    aspect-ratio: 16 / 9;
+  }
 }

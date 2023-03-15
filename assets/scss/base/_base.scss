@@ -6,6 +6,9 @@
   @include view($min-width: $tablet-portrait) {
     --title-size: 2rem;
     --heading-size: 1.5rem;
+  }
+
+  @include view($min-width: $tablet-landscape) {
     --header-inline-size: 25%;
   }
 }

@@ -22,8 +22,7 @@
 
 .pv__scroll-nav {
   align-items: center;
-  backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--digicre-color);
   border-radius: 16px 0 0 16px;
   bottom: 64px;
   color: #fff;
@@ -35,7 +34,7 @@
   writing-mode: vertical-lr;
 
   &:hover {
-    background: var(--digicre-color);
+    background: var(--digicre-color-hover);
   }
 
   > svg {

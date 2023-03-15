@@ -1,5 +1,5 @@
 .about-us {
-  --background: #00b0f0;
+  --background: var(--digicre-color);
   --color: #fff;
 
   @extend %section;

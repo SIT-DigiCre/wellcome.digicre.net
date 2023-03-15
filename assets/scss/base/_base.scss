@@ -2,6 +2,8 @@
   --title-size: 1.5rem;
   --heading-size: 1rem;
   --link-color: #005aff;
+  --digicre-color: #00b0f0;
+  --digicre-color-hover: #70d9ff;
 
   @include view($min-width: $tablet-portrait) {
     --title-size: 2rem;
@@ -10,9 +12,9 @@
 }
 
 html {
-  font-family: "Inter", "Source Han Sans", "Noto Sans JP";
+  font-family: "Inter", "Roboto", "Source Han Sans", "Noto Sans JP", sans-serif;
   font-size: 100%;
-  line-height: $lh;
+  line-height: 1.25;
   scroll-behavior: smooth;
 }
 

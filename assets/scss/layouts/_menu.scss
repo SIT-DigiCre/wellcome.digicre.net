@@ -25,13 +25,13 @@
 }
 
 .menu__item--join-us {
-  background: #00b0f0;
+  background: var(--digicre-color);
   column-gap: 0;
   justify-content: center;
   transition: background-color ease 0.3s;
 
   &:hover {
-    background: #70d9ff;
+    background: var(--digicre-color-hover);
   }
 }
 

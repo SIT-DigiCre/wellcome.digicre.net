@@ -23,7 +23,7 @@
         > th {
           @extend %heading;
 
-          line-height: $lh;
+          line-height: 1.25;
           padding: 16px;
           text-align: center;
         }
@@ -44,7 +44,7 @@
           &:first-child {
             @extend %heading;
 
-            line-height: $lh;
+            line-height: 1.25;
             text-align: center;
           }
         }

@@ -7,8 +7,9 @@
   > h2 {
     @extend %title;
   }
+}
 
-  // .events__contents
+.events__content {
   // @extend %markdown-content;
 
   table {

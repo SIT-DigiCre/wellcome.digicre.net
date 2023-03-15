@@ -6,10 +6,10 @@
 }
 
 .join-us__container {
-  --background: #606060;
-  --color: #fff;
-
   @extend %section;
+
+  background: #606060;
+  color: #fff;
 
   > h2 {
     @extend %title;
@@ -24,7 +24,7 @@
   @extend %heading;
 
   align-items: center;
-  background: var(--digicre-color);
+  background: $digicre-blue;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@
   transition: background-color ease 0.3s;
 
   &:hover {
-    background: var(--digicre-color-hover);
+    background: lighten($digicre-blue, 25%);
   }
 
   > svg {

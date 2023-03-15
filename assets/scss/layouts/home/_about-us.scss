@@ -1,8 +1,8 @@
 .about-us {
-  --background: var(--digicre-color);
-  --color: #fff;
-
   @extend %section;
+
+  background: $digicre-blue;
+  color: #fff;
 
   > h2 {
     @extend %title;
@@ -10,7 +10,9 @@
 }
 
 .about-us__contents {
-  --link-color: #fff;
-
   @extend %markdown-content;
+
+  a:any-link {
+    color: inherit;
+  }
 }

@@ -25,13 +25,13 @@
 }
 
 .menu__item--join-us {
-  background: var(--digicre-color);
+  background: $digicre-blue;
   column-gap: 0;
   justify-content: center;
   transition: background-color ease 0.3s;
 
   &:hover {
-    background: var(--digicre-color-hover);
+    background: lighten($digicre-blue, 25%);
   }
 }
 

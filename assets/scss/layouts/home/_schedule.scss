@@ -1,8 +1,8 @@
 .schedule {
-  --background: #fff;
-  --color: #000;
-
   @extend %section;
+
+  background: #fff;
+  color: #000;
 
   > h2 {
     @extend %title;

@@ -1,8 +1,8 @@
 .events {
-  --background: #e9e9e9;
-  --color: #000;
-
   @extend %section;
+
+  background: #e9e9e9;
+  color: #000;
 
   > h2 {
     @extend %title;

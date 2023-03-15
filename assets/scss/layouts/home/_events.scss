@@ -7,7 +7,7 @@
 }
 
 .events__content {
-  // @include markdown-content;
+  @include markdown-content;
 
   table {
     inline-size: 100%;

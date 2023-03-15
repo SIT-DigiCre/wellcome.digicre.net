@@ -1,0 +1,28 @@
+@mixin view($min-width: $sp, $max-width: $pc) {
+  $is-default-min: $min-width == $sp;
+  $is-default-max: $max-width == $pc;
+
+  @if ($is-default-min) {
+    @if ($is-default-max) {
+      // $is-default-min and $is-default-max
+      @error "この mixin を呼び出す必要はありません。";
+    } @else {
+      // $is-default-min and not $is-default-max
+      @media screen and (max-width: ($max-width - 1px)) {
+        @content;
+      }
+    }
+  } @else {
+    @if ($is-default-max) {
+      // not $is-default-min and $is-default-max
+      @media screen and (min-width: $min-width) {
+        @content;
+      }
+    } @else {
+      // not $is-default-min and not $is-default-max
+      @media screen and (min-width: $min-width) and (max-width: ($max-width - 1px)) {
+        @content;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .body {
-  @media screen and (min-width: 1024px) {
-    margin-inline-start: 25%;
+  @include view($min-width: $tablet-landscape) {
+    margin-inline-start: $header-inline-size;
   }
 }

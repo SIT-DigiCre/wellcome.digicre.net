@@ -39,7 +39,7 @@
 .menu__item--toc {
   display: none;
 
-  @media screen and(min-width: 1024px) {
+  @include view($min-width: $tablet-landscape) {
     display: flex;
   }
 }

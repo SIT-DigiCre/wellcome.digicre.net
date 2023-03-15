@@ -2,7 +2,7 @@
   --title-size: 1.5rem;
   --heading-size: 1rem;
 
-  @media screen and(min-width: 768px) {
+  @include view($min-width: $tablet-portrait) {
     --title-size: 2rem;
     --heading-size: 1.5rem;
   }

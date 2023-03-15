@@ -1,41 +1,16 @@
 .teams {
-  background: #fff;
-  padding-block: 64px;
-  padding-inline: 32px;
+  --background: #fff;
+  --color: #000;
+
+  @extend %section;
 
   > h2 {
-    font-feature-settings: "palt";
-    font-size: var(--title-size);
-    font-weight: 700;
-    margin-block-end: 32px;
+    @extend %title;
   }
 }
 
 .teams__contents {
-  margin-block-end: 32px;
-
-  * {
-    line-height: 1.5;
-
-    &:where(:not(:last-child)) {
-      margin-block-end: 8px;
-    }
-  }
-
-  a:any-link {
-    align-items: center;
-    color: rgb(0, 90, 255);
-    display: inline-flex;
-    font-weight: 700;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  strong {
-    font-weight: 700;
-  }
+  @extend %markdown-content;
 }
 
 .teams__container {
@@ -85,15 +60,14 @@
   }
 
   h3 {
+    @extend %heading;
+
     align-items: center;
     backdrop-filter: blur(8px);
     background: rgba(0, 0, 0, 0.5);
     border-radius: 0 16px 0 0;
     bottom: 0;
     display: flex;
-    font-feature-settings: "palt";
-    font-size: var(--heading-size);
-    font-weight: 700;
     padding: 16px;
     position: absolute;
 

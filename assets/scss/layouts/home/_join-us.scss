@@ -6,51 +6,27 @@
 }
 
 .join-us__container {
-  background: #606060;
-  color: #fff;
-  padding-block: 64px;
-  padding-inline: 32px;
+  --background: #606060;
+  --color: #fff;
+
+  @extend %section;
 
   > h2 {
-    font-feature-settings: "palt";
-    font-size: var(--title-size);
-    font-weight: 700;
-    margin-block-end: 32px;
+    @extend %title;
   }
 }
 
 .join-us__contents {
-  * {
-    line-height: 1.5;
-
-    &:where(:not(:last-child)) {
-      margin-block-end: 8px;
-    }
-  }
-
-  a:any-link {
-    align-items: center;
-    display: inline-flex;
-    font-weight: 700;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  strong {
-    font-weight: 700;
-  }
+  @extend %markdown-content;
 }
 
 .join-us__button {
+  @extend %heading;
+
   align-items: center;
   background: #00b0f0;
   color: #fff;
   display: flex;
-  font-feature-settings: "palt";
-  font-size: var(--heading-size);
-  font-weight: 700;
   justify-content: center;
   padding: 32px;
   transition: background-color ease 0.3s;

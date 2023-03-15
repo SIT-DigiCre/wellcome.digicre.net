@@ -1,23 +1,15 @@
 .events {
-  background: #e9e9e9;
-  padding-block: 64px;
-  padding-inline: 32px;
+  --background: #e9e9e9;
+  --color: #000;
 
-  * {
-    line-height: 1.5;
-
-    &:where(:not(:last-child)) {
-      margin-block-end: 8px;
-    }
-  }
+  @extend %section;
 
   > h2 {
-    font-feature-settings: "palt";
-    font-size: var(--title-size);
-    font-weight: 700;
-    line-height: 1.25;
-    margin-block-end: 32px;
+    @extend %title;
   }
+
+  // .events__contents
+  // @extend %markdown-content;
 
   table {
     inline-size: 100%;
@@ -29,9 +21,9 @@
         color: #fff;
 
         > th {
-          font-size: var(--heading-size);
-          font-weight: 700;
-          line-height: 1.25;
+          @extend %heading;
+
+          line-height: $lh;
           padding: 16px;
           text-align: center;
         }
@@ -50,10 +42,9 @@
           padding: 16px;
 
           &:first-child {
-            font-feature-settings: "tnum";
-            font-size: var(--heading-size);
-            font-weight: 700;
-            line-height: 1.25;
+            @extend %heading;
+
+            line-height: $lh;
             text-align: center;
           }
         }

@@ -1,37 +1,16 @@
 .about-us {
-  background: #00b0f0;
-  color: #fff;
-  padding-block: 64px;
-  padding-inline: 32px;
+  --background: #00b0f0;
+  --color: #fff;
+
+  @extend %section;
 
   > h2 {
-    font-feature-settings: "palt";
-    font-size: var(--title-size);
-    font-weight: 700;
-    margin-block-end: 32px;
+    @extend %title;
   }
 }
 
 .about-us__contents {
-  * {
-    line-height: 1.5;
+  --link-color: #fff;
 
-    &:where(:not(:last-child)) {
-      margin-block-end: 8px;
-    }
-  }
-
-  a:any-link {
-    align-items: center;
-    display: inline-flex;
-    font-weight: 700;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  strong {
-    font-weight: 700;
-  }
+  @extend %markdown-content;
 }

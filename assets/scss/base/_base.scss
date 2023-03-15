@@ -1,6 +1,7 @@
 :root {
   --title-size: 1.5rem;
   --heading-size: 1rem;
+  --link-color: #005aff;
 
   @include view($min-width: $tablet-portrait) {
     --title-size: 2rem;
@@ -11,6 +12,6 @@
 html {
   font-family: "Inter", "Source Han Sans", "Noto Sans JP";
   font-size: 100%;
-  line-height: 1.25;
+  line-height: $lh;
   scroll-behavior: smooth;
 }

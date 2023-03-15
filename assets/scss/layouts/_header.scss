@@ -52,8 +52,10 @@
   }
 
   > svg {
+    @extend %icon;
+
     color: #fff;
-    display: block;
+    font-size: 32px;
   }
 }
 

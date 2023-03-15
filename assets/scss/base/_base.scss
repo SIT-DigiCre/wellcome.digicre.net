@@ -15,3 +15,15 @@ html {
   line-height: $lh;
   scroll-behavior: smooth;
 }
+
+iframe {
+  display: block;
+}
+
+strong {
+  font-weight: 700;
+}
+
+svg {
+  display: block;
+}

@@ -6,27 +6,22 @@
 }
 
 .join-us__section {
-  @extend %section;
-
-  background: #404040;
-  color: #fff;
+  @include section($background: #404040, $color: #fff);
 
   > h2 {
-    @extend %title;
+    @include title;
   }
 }
 
 .join-us__content {
-  @extend %markdown-content;
+  @include markdown-content;
 }
 
 .join-us__button {
-  @extend %section;
-  @extend %heading;
+  @include section($background: $digicre-blue, $color: #fff);
+  @include heading;
 
   align-items: center;
-  background: $digicre-blue;
-  color: #fff;
   display: flex;
   justify-content: center;
   transition: background-color ease 0.3s;
@@ -36,6 +31,6 @@
   }
 
   > svg {
-    @extend %icon;
+    @include icon;
   }
 }

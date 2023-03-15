@@ -16,7 +16,7 @@
   }
 
   > svg {
-    @extend %icon;
+    @include icon;
 
     &:nth-child(2) {
       margin-inline-start: auto;

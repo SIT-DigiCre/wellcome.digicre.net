@@ -48,7 +48,7 @@
   }
 
   > svg {
-    @extend %icon;
+    @include icon;
 
     color: #fff;
     font-size: 32px;

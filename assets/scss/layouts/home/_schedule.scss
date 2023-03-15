@@ -1,16 +1,13 @@
 .schedule {
-  @extend %section;
-
-  background: #fff;
-  color: #000;
+  @include section($background: #fff, $color: #000);
 
   > h2 {
-    @extend %title;
+    @include title;
   }
 }
 
 .schedule__content {
-  @extend %markdown-content;
+  @include markdown-content;
 }
 
 .schedule__google-calendar {

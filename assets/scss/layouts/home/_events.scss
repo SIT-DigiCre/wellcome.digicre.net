@@ -1,16 +1,13 @@
 .events {
-  @extend %section;
-
-  background: #e9e9e9;
-  color: #000;
+  @include section($background: #e9e9e9, $color: #000);
 
   > h2 {
-    @extend %title;
+    @include title;
   }
 }
 
 .events__content {
-  // @extend %markdown-content;
+  // @include markdown-content;
 
   table {
     inline-size: 100%;
@@ -22,7 +19,7 @@
         color: #fff;
 
         > th {
-          @extend %heading;
+          @include heading;
 
           line-height: 1.25;
           padding: 16px;
@@ -47,7 +44,7 @@
           padding: 16px;
 
           &:first-child {
-            @extend %heading;
+            @include heading;
 
             line-height: 1.25;
             text-align: center;

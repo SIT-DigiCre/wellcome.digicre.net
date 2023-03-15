@@ -1,16 +1,13 @@
 .teams {
-  @extend %section;
-
-  background: #fff;
-  color: #000;
+  @include section($background: #fff, $color: #000);
 
   > h2 {
-    @extend %title;
+    @include title;
   }
 }
 
 .teams__content {
-  @extend %markdown-content;
+  @include markdown-content;
 }
 
 .teams__wrapper {
@@ -55,7 +52,7 @@
   }
 
   h3 {
-    @extend %heading;
+    @include heading;
 
     align-items: center;
     backdrop-filter: blur(8px);
@@ -67,7 +64,7 @@
     position: absolute;
 
     > svg {
-      @extend %icon;
+      @include icon;
     }
   }
 }

@@ -6,22 +6,15 @@
 }
 
 .about-us__section {
-  @extend %section;
-
-  background: $digicre-blue;
-  color: #fff;
+  @include section($background: $digicre-blue, $color: #fff);
 
   > h2 {
-    @extend %title;
+    @include title;
   }
 }
 
 .about-us__content {
-  @extend %markdown-content;
-
-  a:any-link {
-    color: inherit;
-  }
+  @include markdown-content($link-color: inherit);
 }
 
 .about-us__img {

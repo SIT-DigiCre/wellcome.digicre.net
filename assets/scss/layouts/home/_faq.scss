@@ -1,11 +1,8 @@
 .faq {
-  @extend %section;
-
-  background: #e9e9e9;
-  color: #000;
+  @include section($background: #e9e9e9, $color: #000);
 
   > h2 {
-    @extend %title;
+    @include title;
   }
 }
 
@@ -20,7 +17,7 @@
   padding: 32px;
 
   > h3 {
-    @extend %heading;
+    @include heading;
 
     + * {
       margin-block-start: 16px;
@@ -29,5 +26,45 @@
 }
 
 .faq__content {
-  @extend %markdown-content;
+  @include markdown-content;
+
+  blockquote {
+    border-inline-start: solid 1px #606060;
+    margin-inline-start: 2em;
+    padding: 16px;
+  }
+
+  table {
+    font-feature-settings: "tnum";
+    margin-inline: auto;
+
+    > thead {
+      > tr {
+        > th {
+          border: solid 1px #404040;
+          font-weight: 700;
+          line-height: 1.25;
+          padding: 16px;
+          text-align: center;
+        }
+      }
+    }
+
+    > tbody {
+      > tr {
+        &:nth-child(2n - 1) {
+          background: #e9e9e9;
+        }
+
+        &:nth-child(2n) {
+          background: #fff;
+        }
+
+        > td {
+          border: solid 1px #404040;
+          padding: 16px;
+        }
+      }
+    }
+  }
 }

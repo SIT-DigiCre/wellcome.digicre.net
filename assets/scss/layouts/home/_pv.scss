@@ -38,6 +38,6 @@
   }
 
   > svg {
-    @extend %icon;
+    @include icon;
   }
 }

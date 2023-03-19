@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "preview": "hugo server",
+    "build": "hugo --minify",
     "dev": "hugo -e development",
-    "build": "hugo --minify"
+    "format": "bash ./format.sh",
+    "preview": "hugo server"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "2.2.0",

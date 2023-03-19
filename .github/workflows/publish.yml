@@ -1,31 +1,31 @@
-name: Publish on GitHub Pages
+name: "Publish on GitHub Pages"
 
 on:
   push:
     branches:
-      - main
+      - "main"
   workflow_dispatch:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: "ubuntu-22.04"
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+      group: "${{ github.workflow }}-${{ github.ref }}"
     steps:
-      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+      - uses: "actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c"
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@16361eb4acea8698b220b76c0d4e84e1fd22c61d
+      - name: "Setup Hugo"
+        uses: "peaceiris/actions-hugo@16361eb4acea8698b220b76c0d4e84e1fd22c61d"
         with:
           hugo-version: "0.111.1"
           extended: true
 
-      - name: Build
-        run: hugo --minify
+      - name: "Build"
+        run: "hugo --minify"
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@bd8c6b06eba6b3d25d72b7a1767993c0aeee42e7
+      - name: "Deploy"
+        uses: "peaceiris/actions-gh-pages@bd8c6b06eba6b3d25d72b7a1767993c0aeee42e7"
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          # cname:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          publish_dir: "./public"
+          cname: "digicre.net"

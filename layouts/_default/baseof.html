@@ -144,12 +144,15 @@
       <small>© 2023 デジクリ</small>
     </footer>
 
-    {{ with resources.Get "js/index.ts" | js.Build | minify | resources.Fingerprint }}
+    {{/* 共通 JavaScript */}}
+    {{ with resources.Get "js/index.js" | js.Build | minify | resources.Fingerprint }}
       <script
         src="{{ .Permalink }}"
         defer
       ></script>
     {{ end }}
+
+    {{/* 各ページ用の JavaScript */}}
     {{ block "script" . }}
     {{ end }}
   </body>

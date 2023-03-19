@@ -48,10 +48,17 @@
 {{ end }}
 
 {{ define "script" }}
-  {{ with resources.Get "js/home.ts" | js.Build | minify | resources.Fingerprint }}
+  {{/* ScrollReveal */}}
+  <script
+    src="https://unpkg.com/scrollreveal@latest/dist/scrollreveal.min.js"
+    defer
+  ></script>
+
+  {{ with resources.Get "js/home.js" | js.Build | minify | resources.Fingerprint }}
     <script
       src="{{ .Permalink }}"
       defer
     ></script>
   {{ end }}
+
 {{ end }}

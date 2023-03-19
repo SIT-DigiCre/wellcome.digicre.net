@@ -1,12 +1,13 @@
 baseURL: "https://digicre.net/welcome/"
-title: "デジクリ"
+cleanDestinationDir: true
 disableHugoGeneratorInject: true
 hasCJKLanguage: true
+title: "デジクリ"
 
 disableKinds:
+  - "RSS"
   - "taxonomy"
   - "term"
-  - "RSS"
 
 params:
   description: ""

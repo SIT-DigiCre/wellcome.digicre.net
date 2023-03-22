@@ -26,7 +26,7 @@ menu:
       url: "https://www.youtube.com/@sitdigicre"
       weight: 20
     - identifier: "line"
-      name: "オープンチャット"
+      name: "LINE オープンチャット"
       url: "https://line.me/ti/g2/abQ1pMeoIVNJtBHV8Zd6hI0JZVs85uLzn38RTw"
       weight: 30
     - identifier: "digicre"

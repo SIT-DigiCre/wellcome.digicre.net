@@ -2,6 +2,7 @@
   "extends": "stylelint-config-standard-scss",
   "plugins": ["stylelint-order"],
   "rules": {
+    "color-function-notation": "legacy",
     "font-family-name-quotes": "always-unless-keyword",
     "order/properties-alphabetical-order": true,
     "scss/no-global-function-names": null,

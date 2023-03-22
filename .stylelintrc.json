@@ -1,7 +1,10 @@
 {
   "extends": "stylelint-config-standard-scss",
-  "plugins": ["stylelint-order"],
+  "plugins": ["stylelint-order", "stylelint-selector-bem-pattern"],
   "rules": {
-    "order/properties-alphabetical-order": true
+    "font-family-name-quotes": "always-unless-keyword",
+    "order/properties-alphabetical-order": true,
+    "scss/no-global-function-names": null,
+    "selector-class-pattern": null
   }
 }

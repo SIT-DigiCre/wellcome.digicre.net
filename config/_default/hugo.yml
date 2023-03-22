@@ -15,7 +15,7 @@ params:
 menu:
   join-us:
     - name: "参加申込"
-      url: "https://forms.gle/KQMZuZ9YYL832Vc66" # 実際のフォーム URL に書き換えること
+      url: "https://forms.gle/2SwwUQ63Pbme8HrE7"
   links:
     - identifier: "twitter"
       name: "Twitter"
@@ -25,14 +25,18 @@ menu:
       name: "YouTube"
       url: "https://www.youtube.com/@sitdigicre"
       weight: 20
+    - identifier: "line"
+      name: "オープンチャット"
+      url: "https://line.me/ti/g2/abQ1pMeoIVNJtBHV8Zd6hI0JZVs85uLzn38RTw"
+      weight: 30
     - identifier: "digicre"
       name: "ウェブサイト"
       url: "https://digicre.net"
-      weight: 30
+      weight: 40
     - identifier: "contact"
       name: "お問い合わせ"
       url: "mailto:contact@digicre.net"
-      weight: 40
+      weight: 50
   pv:
     - identifier: "pv"
       name: "デジクリ紹介動画"
@@ -40,7 +44,7 @@ menu:
   event:
     - identifier: "calendar"
       name: "新歓イベント日程"
-      url: "https://calendar.google.com/calendar/embed?height=320&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&title&showTitle=0&showNav=1&showPrint=0&showCalendars=0&showTz=0&hl=ja&src=c2l0ZGlnaWNyZWNpcmNsZUBnbWFpbC5jb20&color=%23138fcc"
+      url: "https://calendar.google.com/calendar/embed?height=320&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&title&showTitle=0&showNav=1&showPrint=0&showCalendars=0&showTz=0&hl=ja&mode=AGENDA&src=c2l0ZGlnaWNyZWNpcmNsZUBnbWFpbC5jb20&color=%23138fcc" # 新歓専用カレンダーに差し替える
   teams:
     - identifier: "pg"
       name: "PG 班"
@@ -70,7 +74,11 @@ menu:
       name: "xR 班"
       url: ""
       weight: 70
+    - identifier: "writing"
+      name: "物書き班"
+      url: ""
+      weight: 80
     - identifier: "sys-dev"
       name: "SysDev 班"
       url: ""
-      weight: 80
+      weight: 90

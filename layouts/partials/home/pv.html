@@ -1,15 +1,34 @@
 <div class="pv">
   {{ range first 1 (index .Site.Menus "pv") }}
+    {{/* 動画の URL */}}
+    {{ $video := print "https://www.youtube-nocookie.com/embed/" .Identifier "?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&controls=0&end=57&playlist=" .Identifier }}
+
+
     <iframe
-      type="text/html"
       width="320"
       height="240"
-      src="{{ .URL }}"
+      src="{{ $video }}"
       frameborder="0"
-      class="pv__player"
+      class="pv__media"
       loading="lazy"
       title="{{ .Name }}"
     ></iframe>
+
+    <noscript>
+      {{/* サムネイル画像の URL */}}
+      {{ $img := print "https://img.youtube.com/vi/" .Identifier "/maxresdefault.jpg" }}
+
+
+      <img
+        src="{{ $img }}"
+        alt="{{ .Name }}"
+        width="320"
+        height="240"
+        class="pv__media"
+        loading="lazy"
+        decoding="async"
+      />
+    </noscript>
   {{ end }}
 
 

@@ -38,9 +38,8 @@ menu:
       url: "mailto:contact@digicre.net"
       weight: 50
   pv:
-    - identifier: "pv"
+    - identifier: "EaFvRsJAV9U" # 動画の ID
       name: "デジクリ紹介動画"
-      url: "https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&controls=0&end=57&playlist=EaFvRsJAV9U"
   event:
     - identifier: "calendar"
       name: "新歓イベント日程"

@@ -13,10 +13,12 @@
   }
 }
 
-.pv__player {
+.pv__media {
   background: #000;
   block-size: 100%;
+  color: #fff;
   inline-size: 100%;
+  object-fit: cover;
   position: absolute;
 }
 

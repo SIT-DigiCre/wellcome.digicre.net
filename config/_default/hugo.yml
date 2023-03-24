@@ -40,7 +40,7 @@ menu:
   pv:
     - identifier: "pv"
       name: "デジクリ紹介動画"
-      url: "https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&controls=0&playlist=EaFvRsJAV9U"
+      url: "https://www.youtube.com/embed/EaFvRsJAV9U?autoplay=1&mute=1&modestbranding=1&playsinline=1&disablekb=1&loop=1&controls=0&end=57&playlist=EaFvRsJAV9U"
   event:
     - identifier: "calendar"
       name: "新歓イベント日程"

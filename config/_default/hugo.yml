@@ -75,7 +75,7 @@ menu:
       url: ""
       weight: 70
     - identifier: "writing"
-      name: "物書き班"
+      name: "文字書き班"
       url: ""
       weight: 80
     - identifier: "sys-dev"

@@ -4,21 +4,8 @@
   "labels": ["renovate"],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["on sunday"]
+    "schedule": ["every 12 months on the first day of the month"]
   },
-  "packageRules": [
-    {
-      "matchUpdateTypes": [
-        "digest",
-        "lockFileMaintenance",
-        "minor",
-        "patch",
-        "pin",
-        "pinDigest"
-      ],
-      "automerge": true
-    }
-  ],
-  "schedule": ["on sunday"],
+  "schedule": ["every 12 months on the first day of the month"],
   "timezone": "Asia/Tokyo"
 }

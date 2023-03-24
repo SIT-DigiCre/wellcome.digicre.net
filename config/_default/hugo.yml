@@ -48,35 +48,35 @@ menu:
       name: "PG 班"
       url: "https://digicre.net/about/pg"
       weight: 10
+    - identifier: "sys-dev"
+      name: "SysDev 班"
+      url: ""
+      weight: 20
     - identifier: "2dcg"
       name: "イラスト班"
       url: "https://digicre.net/about/2dcg"
-      weight: 20
+      weight: 30
     - identifier: "3dcg"
       name: "3DCG 班"
       url: "https://digicre.net/about/3dcg"
-      weight: 30
+      weight: 40
     - identifier: "dtm"
       name: "DTM 班"
       url: "https://digicre.net/about/dtm"
-      weight: 40
+      weight: 50
     - identifier: "movie"
       name: "Movie 班"
       url: "https://digicre.net/about/movie"
-      weight: 50
+      weight: 60
     - identifier: "v-tuber"
       name: "VTuber 班"
       url: "https://www.youtube.com/channel/UCgh1tbd7SC4qv9A6RffbB0g"
-      weight: 60
+      weight: 70
     - identifier: "xr"
       name: "xR 班"
-      url: ""
-      weight: 70
+      url: "https://digicre.net/about/xr"
+      weight: 80
     - identifier: "writing"
       name: "文字書き班"
-      url: ""
-      weight: 80
-    - identifier: "sys-dev"
-      name: "SysDev 班"
       url: ""
       weight: 90

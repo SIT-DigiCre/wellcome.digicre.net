@@ -15,7 +15,7 @@ jobs:
       - uses: "actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c"
 
       - name: "Set up Hugo"
-        uses: "peaceiris/actions-hugo@16361eb4acea8698b220b76c0d4e84e1fd22c61d"
+        uses: "peaceiris/actions-hugo@7c4b9f1f99c72728600c292c1f0e7138cc3a8865"
         with:
           hugo-version: "0.111.3"
           extended: true

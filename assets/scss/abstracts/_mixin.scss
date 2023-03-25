@@ -62,14 +62,19 @@
   }
 
   a:any-link {
-    align-items: center;
     color: $link-color;
-    display: inline-flex;
     font-weight: 700;
-    margin-block-start: 0;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    > svg {
+      @include icon;
+
+      display: inline-block;
+      inset-block-start: 0.125em;
+      position: relative;
     }
   }
 

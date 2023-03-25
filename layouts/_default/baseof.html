@@ -78,6 +78,7 @@
       <label
         for="header-toggle"
         class="header__toggle-button header__toggle-button--open"
+        aria-label="メニューを開く"
       >
         {{ (resources.Get "img/icons/menu.svg").Content | safeHTML }}
       </label>
@@ -88,6 +89,7 @@
         <label
           for="header-toggle"
           class="header__toggle-button header__toggle-button--close"
+          aria-label="メニューを閉じる"
         >
           {{ (resources.Get "img/icons/close.svg").Content | safeHTML }}
         </label>
@@ -96,6 +98,7 @@
         <a
           href="{{ .Site.Home.Permalink }}"
           class="logo"
+          aria-label="デジクリ"
         >
           {{ (resources.Get "img/logo.svg").Content | safeHTML }}
         </a>

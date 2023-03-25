@@ -35,7 +35,7 @@
 
 ## サイトを公開する
 
-GitHub Actions を利用し，`master` ブランチが push された場合，**自動的に `master` ブランチのコードを基にサイトを生成・公開する仕組み**となっています（cf. `.github/workflows/publish.yml`）。
+GitHub Actions を利用し，`master` ブランチが push された場合，**自動的に `master` ブランチのコードを基にサイトを生成し，`gh-pages` ブランチの内容をサイトとして公開する仕組み**となっています（cf. `.github/workflows/publish.yml`）。
 
 ## 依存関係をアップデートする
 

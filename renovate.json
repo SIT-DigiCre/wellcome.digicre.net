@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", "helpers:pinGitHubActionDigests"],
+  "labels": ["renovate"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["every 12 months on the first day of the month"]
+  },
+  "schedule": ["every 12 months on the first day of the month"],
+  "timezone": "Asia/Tokyo"
+}

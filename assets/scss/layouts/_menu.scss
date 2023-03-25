@@ -1,0 +1,44 @@
+.menu {
+  background: #404040;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.menu__item {
+  align-items: center;
+  column-gap: 16px;
+  display: flex;
+  flex-grow: 1;
+  padding: 16px;
+
+  &:hover {
+    background: #606060;
+  }
+
+  > svg {
+    @include icon;
+
+    &:nth-child(2) {
+      margin-inline-start: auto;
+    }
+  }
+}
+
+.menu__item--join-us {
+  background: $digicre-blue;
+  column-gap: 0;
+  justify-content: center;
+  transition: background-color ease 0.3s;
+
+  &:hover {
+    background: lighten($digicre-blue, 25%);
+  }
+}
+
+.menu__item--toc {
+  display: none;
+
+  @include view($min-width: $tablet-landscape) {
+    display: flex;
+  }
+}

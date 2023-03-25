@@ -1,0 +1,24 @@
+{{ with .Site.GetPage "/join-us" }}
+  <div class="join-us">
+    <article class="join-us__section">
+      <h2>{{ .Title }}</h2>
+
+      <div class="join-us__content">
+        {{ .Content }}
+      </div>
+    </article>
+
+    {{ range first 1 (index .Site.Menus "join-us") }}
+      <a
+        href="{{ .URL }}"
+        rel="noopener"
+        target="_blank"
+        class="join-us__button"
+      >
+        {{ .Name }}
+
+        {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
+      </a>
+    {{ end }}
+  </div>
+{{ end }}

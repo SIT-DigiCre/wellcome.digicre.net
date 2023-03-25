@@ -1,0 +1,109 @@
+@mixin view($min-width: $sp, $max-width: $pc) {
+  $is-default-min: $min-width == $sp;
+  $is-default-max: $max-width == $pc;
+
+  @if $is-default-min {
+    @if $is-default-max {
+      // $is-default-min and $is-default-max
+      @error "この mixin を呼び出す必要はありません。";
+    } @else {
+      // $is-default-min and not $is-default-max
+      @media screen and (max-width: ($max-width - 1px)) {
+        @content;
+      }
+    }
+  } @else {
+    @if $is-default-max {
+      // not $is-default-min and $is-default-max
+      @media screen and (min-width: $min-width) {
+        @content;
+      }
+    } @else {
+      // not $is-default-min and not $is-default-max
+      @media screen and (min-width: $min-width) and (max-width: ($max-width - 1px)) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin section($background, $color) {
+  background: $background;
+  color: $color;
+  padding-block: 64px;
+  padding-inline: 32px;
+
+  > * + * {
+    margin-block-start: 32px;
+  }
+}
+
+@mixin title {
+  font-feature-settings: "palt";
+  font-size: var(--title-size);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+@mixin heading {
+  font-feature-settings: "palt";
+  font-size: var(--heading-size);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+@mixin markdown-content($link-color: #005aff) {
+  * {
+    line-height: 1.5;
+  }
+
+  * + * {
+    margin-block-start: 8px;
+  }
+
+  a:any-link {
+    color: $link-color;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    > svg {
+      @include icon;
+
+      display: inline-block;
+      inset-block-start: 0.125em;
+      position: relative;
+    }
+  }
+
+  ul,
+  ol {
+    margin-inline-start: 2em;
+
+    ul,
+    ol,
+    li {
+      margin-block-start: 0;
+    }
+  }
+
+  ul {
+    > li {
+      list-style: disc;
+    }
+  }
+
+  ol {
+    > li {
+      list-style: decimal;
+    }
+  }
+}
+
+@mixin icon {
+  aspect-ratio: 1 / 1;
+  block-size: 1em;
+  inline-size: 1em;
+}

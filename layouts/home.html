@@ -1,0 +1,64 @@
+{{ define "main" }}
+  {{/* PV */}}
+  {{ partial "home/pv.html" . }}
+
+  {{/* content 以下の各セクション */}}
+  {{ range .Site.Sections.ByWeight }}
+    {{ $id :=  path.Dir .File.Dir }}
+    {{ partial (path.Join "home" $id) . }}
+  {{ end }}
+
+  {{/* 興味がありますか？ */}}
+  {{ partial "home/join-us.html" . }}
+{{ end }}
+
+{{ define "toc" }}
+  {{/* 目次 */}}
+  {{ range .Site.Sections.ByWeight }}
+    {{ $id :=  path.Dir .File.Dir }}
+    {{ $iconPath := print "img/icons/" $id ".svg" }}
+
+
+    <li>
+      <a
+        href="#{{ $id }}"
+        class="menu__item menu__item--toc"
+      >
+        {{ (resources.Get $iconPath).Content | safeHTML }}
+        {{ .Title }}
+      </a>
+    </li>
+  {{ end }}
+
+  {{/* 参加申込 */}}
+  {{ range first 1 (index .Site.Menus "join-us") }}
+    <li>
+      <a
+        href="{{ .URL }}"
+        rel="noopener"
+        target="_blank"
+        class="menu__item menu__item--join-us"
+      >
+        {{ .Name }}
+
+        {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
+      </a>
+    </li>
+  {{ end }}
+{{ end }}
+
+{{ define "script" }}
+  {{/* ScrollReveal */}}
+  <script
+    src="https://unpkg.com/scrollreveal@latest/dist/scrollreveal.min.js"
+    defer
+  ></script>
+
+  {{ with resources.Get "js/home.js" | js.Build | minify | resources.Fingerprint }}
+    <script
+      src="{{ .Permalink }}"
+      defer
+    ></script>
+  {{ end }}
+
+{{ end }}

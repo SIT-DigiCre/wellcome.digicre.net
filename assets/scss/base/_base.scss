@@ -1,0 +1,31 @@
+:root {
+  --title-size: 1.5rem;
+  --heading-size: 1rem;
+  --header-inline-size: 100%;
+
+  @include view($min-width: $tablet-portrait) {
+    --title-size: 2rem;
+    --heading-size: 1.5rem;
+  }
+
+  @include view($min-width: $tablet-landscape) {
+    --header-inline-size: 25%;
+  }
+}
+
+html {
+  font-family: "Inter", "Roboto", "Helvetica Neue", "Arial", "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.25;
+  scroll-behavior: smooth;
+}
+
+iframe {
+  display: block;
+}
+
+strong {
+  font-weight: 700;
+}

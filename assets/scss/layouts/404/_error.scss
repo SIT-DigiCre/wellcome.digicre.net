@@ -1,0 +1,11 @@
+.error {
+  @include section($background: #fff, $color: #000);
+
+  > h1 {
+    @include title;
+  }
+}
+
+.error__content {
+  @include markdown-content;
+}

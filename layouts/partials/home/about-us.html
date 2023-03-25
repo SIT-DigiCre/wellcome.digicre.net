@@ -1,0 +1,26 @@
+{{ with .Site.GetPage "/about-us" }}
+  <div
+    class="about-us"
+    id="about-us"
+  >
+    <article class="about-us__section">
+      <h2>{{ .Title }}</h2>
+
+      <div class="about-us__content">
+        {{ .Content }}
+      </div>
+    </article>
+
+    {{ with resources.Get "img/about-us.webp" }}
+      <img
+        src="{{ .Permalink }}"
+        alt
+        loading="lazy"
+        decoding="async"
+        class="about-us__img"
+        width="320"
+        height="240"
+      />
+    {{ end }}
+  </div>
+{{ end }}

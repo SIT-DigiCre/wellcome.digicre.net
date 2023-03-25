@@ -1,0 +1,22 @@
+.event {
+  @include section($background: #fff, $color: #000);
+
+  > h2 {
+    @include title;
+  }
+}
+
+.event__content {
+  @include markdown-content;
+}
+
+.event__google-calendar {
+  aspect-ratio: 1 / 1;
+  background: #e3e9ff; // Google Calendar の色
+  block-size: auto;
+  inline-size: 100%;
+
+  @include view($tablet-portrait) {
+    aspect-ratio: 16 / 9;
+  }
+}

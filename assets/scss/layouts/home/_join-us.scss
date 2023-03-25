@@ -1,0 +1,36 @@
+.join-us {
+  @include view($min-width: $tablet-portrait) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.join-us__section {
+  @include section($background: #404040, $color: #fff);
+
+  > h2 {
+    @include title;
+  }
+}
+
+.join-us__content {
+  @include markdown-content($link-color: inherit);
+}
+
+.join-us__button {
+  @include section($background: $digicre-blue, $color: #fff);
+  @include heading;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: background-color ease 0.3s;
+
+  &:hover {
+    background: lighten($digicre-blue, 25%);
+  }
+
+  > svg {
+    @include icon;
+  }
+}

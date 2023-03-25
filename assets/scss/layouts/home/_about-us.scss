@@ -1,0 +1,25 @@
+.about-us {
+  @include view($min-width: $tablet-portrait) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.about-us__section {
+  @include section($background: $digicre-blue, $color: #fff);
+
+  > h2 {
+    @include title;
+  }
+}
+
+.about-us__content {
+  @include markdown-content($link-color: inherit);
+}
+
+.about-us__img {
+  background: #404040;
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}

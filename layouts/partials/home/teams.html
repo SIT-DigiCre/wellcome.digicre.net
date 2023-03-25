@@ -1,0 +1,64 @@
+{{ with .Site.GetPage "/teams" }}
+  <div
+    class="teams"
+    id="teams"
+  >
+    <h2>{{ .Title }}</h2>
+
+    {{ with .Content }}
+      <div class="teams__content">
+        {{ . }}
+      </div>
+    {{ end }}
+
+
+    <div class="teams__wrapper">
+      {{ range index .Site.Menus "teams" }}
+        <article class="teams__card">
+          {{ $img := print "img/teams/" .Identifier ".webp" }}
+
+          {{ if .URL }}
+            <a
+              href="{{ .URL }}"
+              rel="noopener"
+              target="_blank"
+            >
+              {{ with resources.Get $img }}
+                <img
+                  src="{{ .Permalink }}"
+                  alt
+                  width="256"
+                  height="144"
+                  loading="lazy"
+                  decoding="async"
+                />
+              {{ end }}
+
+
+              <h3>
+                {{ .Name }}
+                {{ (resources.Get "img/icons/open-in-new.svg").Content | safeHTML }}
+              </h3>
+            </a>
+          {{ else }}
+            {{ with resources.Get $img }}
+              <img
+                src="{{ .Permalink }}"
+                alt
+                width="256"
+                height="144"
+                loading="lazy"
+                decoding="async"
+              />
+            {{ end }}
+
+
+            <h3>
+              {{ .Name }}
+            </h3>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

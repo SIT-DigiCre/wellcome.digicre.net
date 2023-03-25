@@ -1,0 +1,1 @@
+(()=>{var e=()=>{const e=document.getElementById("google-fonts");e.href=e.getAttribute("data-href")};addEventListener("load",e)})()

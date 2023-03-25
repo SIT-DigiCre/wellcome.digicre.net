@@ -35,7 +35,7 @@ jobs:
         run: "npm run build"
 
       - name: "Deploy"
-        uses: "peaceiris/actions-gh-pages@bd8c6b06eba6b3d25d72b7a1767993c0aeee42e7"
+        uses: "peaceiris/actions-gh-pages@66f12e737e7d797bbad4057a4002da12cb31a57b"
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           publish_dir: "./public"

@@ -28,6 +28,9 @@ jobs:
       - name: "Install npm dependencies"
         run: "npm ci"
 
+      - name: "Format codes"
+        run: "npm run format"
+
       - name: "Build"
         run: "npm run build"
 

@@ -38,7 +38,7 @@ menu:
       url: "mailto:contact@digicre.net"
       weight: 50
   pv:
-    - identifier: "EaFvRsJAV9U" # 動画の ID
+    - identifier: "EaFvRsJAV9U" # YouTube の動画 ID
       name: "デジクリ紹介動画"
   event:
     - identifier: "YzgxYWVkNzczZjQ0ZWMxNWNhOWI1ODRlZWVjN2I0ODZmY2JkZmEzNzMyZTc4ZTE2YTQ0MDZiMzFiYTAwMDNlOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" # Google Calendar の ID
@@ -50,7 +50,7 @@ menu:
       weight: 10
     - identifier: "sys-dev"
       name: "SysDev 班"
-      url: ""
+      url: "https://digicre.net/about/sysdev"
       weight: 20
     - identifier: "2dcg"
       name: "イラスト班"

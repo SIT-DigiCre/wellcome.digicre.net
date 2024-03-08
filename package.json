@@ -11,7 +11,7 @@
     "prettier": "3.2.5",
     "prettier-plugin-go-template": "0.0.15",
     "stylelint": "16.2.1",
-    "stylelint-config-standard-scss": "7.0.1",
+    "stylelint-config-standard-scss": "13.0.0",
     "stylelint-order": "6.0.3"
   }
 }

@@ -14,7 +14,7 @@ params:
 
 menu:
   join-us:
-    - name: "参加申込"
+    - name: "入部受付"
       url: "https://forms.gle/2SwwUQ63Pbme8HrE7"
   links:
     - identifier: "twitter"

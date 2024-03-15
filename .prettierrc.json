@@ -1,5 +1,6 @@
 {
   "singleAttributePerLine": true,
+  "plugins": ["prettier-plugin-go-template", "@prettier/plugin-xml"],
   "overrides": [
     {
       "files": ["*.html"],

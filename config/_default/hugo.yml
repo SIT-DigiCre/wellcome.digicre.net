@@ -2,7 +2,7 @@ baseURL: "https://digicre.net/welcome/"
 cleanDestinationDir: true
 disableHugoGeneratorInject: true
 hasCJKLanguage: true
-title: "デジクリ"
+title: "デジクリの紹介 - 芝浦工業大学 デジクリ"
 
 disableKinds:
   - "RSS"
@@ -14,11 +14,11 @@ params:
 
 menu:
   join-us:
-    - name: "参加申込"
+    - name: "入部受付"
       url: "https://forms.gle/2SwwUQ63Pbme8HrE7"
   links:
     - identifier: "twitter"
-      name: "Twitter"
+      name: "X (Twitter)"
       url: "https://twitter.com/sitdigicre"
       weight: 10
     - identifier: "youtube"
@@ -27,7 +27,7 @@ menu:
       weight: 20
     - identifier: "line"
       name: "LINE オープンチャット"
-      url: "https://line.me/ti/g2/abQ1pMeoIVNJtBHV8Zd6hI0JZVs85uLzn38RTw"
+      url: "https://line.me/ti/g2/HParErij--I835lSEnSJeevqTnb_YTRqx-Movw"
       weight: 30
     - identifier: "digicre"
       name: "ウェブサイト"
@@ -38,7 +38,7 @@ menu:
       url: "mailto:contact@digicre.net"
       weight: 50
   pv:
-    - identifier: "EaFvRsJAV9U" # YouTube の動画 ID
+    - identifier: "nnJ5ml6D2UE" # YouTube の動画 ID
       name: "デジクリ紹介動画"
   event:
     - identifier: "YzgxYWVkNzczZjQ0ZWMxNWNhOWI1ODRlZWVjN2I0ODZmY2JkZmEzNzMyZTc4ZTE2YTQ0MDZiMzFiYTAwMDNlOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" # Google Calendar の ID

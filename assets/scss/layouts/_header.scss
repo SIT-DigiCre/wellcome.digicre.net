@@ -56,6 +56,7 @@
   }
 }
 
+// stylelint-disable no-descending-specificity
 .header__toggle-button--open {
   background: $digicre-blue;
   border-radius: 0 0 16px;
@@ -67,6 +68,7 @@
     background: lighten($digicre-blue, 25%);
   }
 }
+// stylelint-enable no-descending-specificity
 
 .header__toggle-button--close {
   position: absolute;

@@ -38,7 +38,7 @@ menu:
       url: "mailto:contact@digicre.net"
       weight: 50
   pv:
-    - identifier: "EaFvRsJAV9U" # YouTube の動画 ID
+    - identifier: "nnJ5ml6D2UE" # YouTube の動画 ID
       name: "デジクリ紹介動画"
   event:
     - identifier: "YzgxYWVkNzczZjQ0ZWMxNWNhOWI1ODRlZWVjN2I0ODZmY2JkZmEzNzMyZTc4ZTE2YTQ0MDZiMzFiYTAwMDNlOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" # Google Calendar の ID

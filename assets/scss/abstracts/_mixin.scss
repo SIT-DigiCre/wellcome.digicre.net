@@ -89,6 +89,7 @@
     }
   }
 
+  // stylelint-disable no-descending-specificity
   ul {
     > li {
       list-style: disc;
@@ -100,6 +101,7 @@
       list-style: decimal;
     }
   }
+  // stylelint-enable no-descending-specificity
 }
 
 @mixin icon {

@@ -43,7 +43,9 @@
     inset: 0;
     object-fit: cover;
     position: absolute;
-    transition: transform ease 0.3s, filter ease 0.3s;
+    transition:
+      transform ease 0.3s,
+      filter ease 0.3s;
 
     &:hover {
       filter: brightness(75%);

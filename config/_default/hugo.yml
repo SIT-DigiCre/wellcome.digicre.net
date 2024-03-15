@@ -2,7 +2,7 @@ baseURL: "https://digicre.net/welcome/"
 cleanDestinationDir: true
 disableHugoGeneratorInject: true
 hasCJKLanguage: true
-title: "デジクリ"
+title: "デジクリの紹介 - 芝浦工業大学 デジクリ"
 
 disableKinds:
   - "RSS"
@@ -18,7 +18,7 @@ menu:
       url: "https://forms.gle/2SwwUQ63Pbme8HrE7"
   links:
     - identifier: "twitter"
-      name: "Twitter"
+      name: "X (Twitter)"
       url: "https://twitter.com/sitdigicre"
       weight: 10
     - identifier: "youtube"
@@ -27,7 +27,7 @@ menu:
       weight: 20
     - identifier: "line"
       name: "LINE オープンチャット"
-      url: "https://line.me/ti/g2/abQ1pMeoIVNJtBHV8Zd6hI0JZVs85uLzn38RTw"
+      url: "https://line.me/ti/g2/HParErij--I835lSEnSJeevqTnb_YTRqx-Movw"
       weight: 30
     - identifier: "digicre"
       name: "ウェブサイト"
